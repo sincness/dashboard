@@ -1,0 +1,5806 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700&display=swap');
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    
+}
+body {
+	background: #dddddd;
+	overflow: hidden;
+
+}
+.aktiviteterBg{
+    list-style-type: none;
+    background-color: #43425d;
+    width: 415px;
+    height: 100vh;
+    position: absolute;
+}
+
+h2{
+    padding: 20px;
+    letter-spacing: 3px;
+}
+
+.aktiviteterGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(1fr);
+    grid-gap: 10px;
+}
+//#3674B5 // - den blå farve
+//#78952b //- den grønne farve
+//#7D2772 //- den lilla farve
+//#A83331 //- den rød farve
+
+
+.aktivitet {
+    position: relative;
+    width: 200px;
+    height: 94px;
+    overflow: visible;
+    // svg elements farve    
+}
+.Bg {
+    overflow: visible;
+    position: absolute;
+    width: 200px;
+    height: 94px;
+    left: 0px;
+    top: 0px;
+    transform: matrix(1,0,0,1,0,0);
+}
+.before {
+    overflow: visible;
+    position: absolute;
+    width: 16px;
+    height: 94px;
+    left: 0px;
+    top: 0px;
+    transform: matrix(1,0,0,1,0,0);
+}
+.holdNavn {
+    position: absolute;
+    left: 95px;
+    top: 49px;
+    overflow: visible;
+    width: 68px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+}
+.tidBg {
+    overflow: visible;
+    position: absolute;
+    width: 167px;
+    height: 19px;
+    left: 26px;
+    top: 10px;
+    transform: matrix(1,0,0,1,0,0);
+}
+.hold {
+    position: absolute;
+    left: 34px;
+    top: 49px;
+    overflow: visible;
+    width: 25px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+}
+.emneNavn {
+    position: absolute;
+    left: 95px;
+    top: 67px;
+    overflow: visible;
+    width: 85px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+}
+.emne {
+    position: absolute;
+    left: 34px;
+    top: 67px;
+    overflow: visible;
+    width: 30px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+}
+.tidStart {
+    position: absolute;
+    left: 95px;
+    top: 11px;
+    overflow: visible;
+    width: 30px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+}
+.lokaleNummer {
+    position: absolute;
+    left: 95px;
+    top: 31px;
+    overflow: visible;
+    width: 28px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+}
+.tid {
+    position: absolute;
+    left: 34px;
+    top: 11px;
+    overflow: visible;
+    width: 18px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+}
+.lokale {
+    position: absolute;
+    left: 34px;
+    top: 31px;
+    overflow: visible;
+    width: 34px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+
+}
+
+
+
+
+// Styles til main-sektionen
+main {
+    margin-left: 415px;
+    padding: 2rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 858px 1fr;
+    // .row1, .row2 {
+    //     display: grid;
+    //     gap: 2rem;
+    // }
+    // .row1 {
+    //     grid-template-rows: repeat(2, 1fr);
+    //     .overetage, .underetage {
+    //     height: 473px;
+    //     background: #00000033;
+    //     border-radius: 6px;
+        
+    //     }
+    // }
+    // .row2 {
+    //     grid-template-rows: repeat(4, 1fr);
+    //     .weatherdatetime {
+    //         grid-row: 2;
+    //         background: #00000033;
+    //         border-radius: 6px;
+    //     }
+    //     .article1 {
+    //         grid-row: 3;
+    //         background: #00000033;
+    //         border-radius: 6px;
+    //     }
+    //     .article2 {
+    //         grid-row: 4;
+    //         background: #00000033;
+    //         border-radius: 6px;
+    //     }
+    // }
+// rss nyhederne
+.nyhed{
+	display: inline-flex;
+	color: black;
+	animation: move linear 900s forwards infinite;
+	position: relative; 
+	padding-top: 10px;
+		font-size: 25px;
+		padding-right: 500px;
+}
+// bargrunden til rss nyhederne 
+.nyhedWrapper{
+	background-color: white;
+	position: absolute;
+	bottom: 0;
+	left: 415px;
+	overflow: hidden;
+	width: 120000px;
+	height: 50px;
+}
+}
+
+
+    
+    // animation som får rss nyhederne til at kører fra høre til venstre
+    @keyframes move {
+      0% {
+          right: -1.4%;
+      }
+      100% {
+          right: 100%;
+      }
+    }   
+
+
+
+
+
+
+	.mediaViewInfo {
+		--web-view-name: Prototype;
+		--web-view-id: Prototype;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: Prototype;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+	#Prototype {
+		position: absolute;
+		background: #E5E5E5;
+		width: 1920px;
+		height: 1080px;
+		background-color: rgba(221,221,221,1);
+		overflow: hidden;
+		--web-view-name: Prototype;
+		--web-view-id: Prototype;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	#Group_311 {
+		position: absolute;
+		width: 3534.512px;
+		height: 2433.706px;
+		left: -966.135px;
+		top: -481.623px;
+		overflow: visible;
+	}
+	#Group_283 {
+		opacity: 0.1;
+		transform: translate(966.135px, 481.623px) matrix(1,0,0,1,806.118,-309.3579) rotate(13deg);
+		transform-origin: center;
+		position: absolute;
+		width: 1658.358px;
+		height: 1112.711px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	.Polygon_1 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1707.7881,295.0758) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_5 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1338.5602,81.9019) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_2 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1845.2182,323.1988) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_6 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1475.9902,110.0249) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_3 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1524.2411,189.1049) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_7 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1155.0132,-24.0689) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_4 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1661.6729,217.2287) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_8 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1292.4447,4.0548) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_9 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1617.8362,450.8771) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_36 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1802.2997,557.3772) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_10 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1248.6083,237.7033) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_11 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1755.2677,479.0009) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_35 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1939.7311,585.5009) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_12 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1386.0398,265.827) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_13 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1434.289,344.9063) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_14 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1065.061,131.7325) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_33 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,880.5971,25.2325) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_15 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1571.721,373.0301) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_16 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1202.4926,159.8562) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_34 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1018.0282,53.3562) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_17 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1527.8841,606.6786) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_26 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1896.811,819.6786) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_30 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,790.8966,181.1786) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_18 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1158.6561,393.5047) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_19 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1665.3157,634.8024) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_25 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,2034.2426,847.8024) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_29 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,928.3283,209.3024) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_20 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1296.0877,421.6285) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_21 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1344.3371,500.7077) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_28 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1713.264,713.7077) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_32 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,607.3496,75.2077) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_22 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,975.1091,287.5339) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_23 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1481.7688,528.8316) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_27 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1850.6957,741.8316) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_31 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,744.7813,103.3315) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_24 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-325.135px, -65.845px) matrix(1,0,0,1,1112.5407,315.6577) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	#Group_284 {
+		opacity: 0.1;
+		transform: translate(966.135px, 481.623px) matrix(1,0,0,1,131.2384,-132.8209) rotate(13deg);
+		transform-origin: center;
+		position: absolute;
+		width: 2111.018px;
+		height: 1220.101px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	.Polygon_1_b {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1707.7881,295.0758) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_75 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1891.6583,402.4664) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_77 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,2075.0787,507.9083) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_79 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,2259.1739,616.2732) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_81 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,2440.2701,716.0939) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_5_b {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1338.5602,81.9019) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_2_b {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1845.2182,323.1988) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_76 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,2029.0883,430.5895) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_78 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,2212.9584,537.9801) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_80 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,2396.6781,640.2739) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_6_cb {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1475.9902,110.0249) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_3_cc {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1524.2411,189.1049) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_7_cd {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1155.0132,-24.0689) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_4_ce {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1661.6729,217.2287) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_8_cf {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1292.4447,4.0548) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_9_cg {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1617.8362,450.8771) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_36_ch {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1802.2997,557.3772) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_68 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1985.0451,659.8959) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_70 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,2168.1659,768.4859) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_72 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,2351.8111,874.9021) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_10_cl {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1248.6083,237.7033) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_11_cm {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1755.2677,479.0009) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_35_cn {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1939.7311,585.5009) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_69 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,2122.1772,691.1677) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_71 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,2305.5973,796.6096) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_12_cq {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1386.0398,265.827) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_13_cr {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1434.289,344.9063) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_14_cs {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1065.061,131.7325) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_33_ct {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,880.5971,25.2325) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_15_cu {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1571.721,373.0301) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_16_cv {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1202.4926,159.8562) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_34_cw {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1018.0282,53.3562) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_17_cx {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1527.8841,606.6786) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_26_cy {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1896.811,819.6786) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_73 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,2080.6813,927.0692) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_30_c {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,790.8966,181.1786) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_18_c {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1158.6561,393.5047) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_19_c {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1665.3157,634.8024) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_25_c {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,2034.2426,847.8024) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_74 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,2218.1127,955.193) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_29_c {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,928.3283,209.3024) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_20_c {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1296.0877,421.6285) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_21_c {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1344.3371,500.7077) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_28_c {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1713.264,713.7077) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_32_c {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,607.3496,75.2077) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_22_da {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,975.1091,287.5339) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_23_db {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1481.7688,528.8316) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_27_dc {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1850.6957,741.8316) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_31_dd {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,744.7813,103.3315) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_24_de {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-300.978px, -65.845px) matrix(1,0,0,1,1112.5407,315.6577) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	#Group_293 {
+		opacity: 0.1;
+		transform: translate(966.135px, 481.623px) matrix(1,0,0,1,-295.6777,-58.7314) rotate(13deg);
+		transform-origin: center;
+		position: absolute;
+		width: 2204.611px;
+		height: 1535.527px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	.Polygon_1_dg {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1707.7881,295.0758) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_75_dh {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1891.6583,402.4664) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_77_di {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,2075.0787,507.9083) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_79_dj {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,2259.1739,616.2732) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_81_dk {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,2440.2701,716.0939) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_5_dl {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1338.5602,81.9019) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_2_dm {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1845.2182,323.1988) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_76_dn {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,2029.0883,430.5895) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_78_do {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,2212.9584,537.9801) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_80_dp {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,2396.6781,640.2739) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_6_dq {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1475.9902,110.0249) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_3_dr {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1524.2411,189.1049) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_7_ds {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1155.0132,-24.0689) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_83 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,968.9692,-131.984) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_85 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,783.6001,-236.9759) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_90 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,600.8547,-339.4947) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_4_dw {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1661.6729,217.2287) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_8_dx {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1292.4447,4.0548) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_82 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1108.5745,-103.3358) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_84 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,922.5306,-211.2509) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_86 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,737.1615,-316.2429) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_9_d {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1617.8362,450.8771) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_36_d {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1802.2997,557.3772) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_68_d {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1985.0451,659.8959) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_70_d {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,2168.1659,768.4859) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_72_d {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,2351.8111,874.9021) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_10_d {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1248.6083,237.7033) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_11_d {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1755.2677,479.0009) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_35_d {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1939.7311,585.5009) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_69_d {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,2122.1772,691.1677) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_71_ea {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,2305.5973,796.6096) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_12_eb {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1386.0398,265.827) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_13_ec {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1434.289,344.9063) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_14_ed {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1065.061,131.7325) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_33_ee {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,880.5971,25.2325) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_88 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,696.9518,-81.1838) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_91 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,513.7565,-185.6513) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_15_eh {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1571.721,373.0301) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_16_ei {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1202.4926,159.8562) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_34_ej {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1018.0282,53.3562) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_87 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,834.383,-53.06) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_89 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,651.1876,-157.5275) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_17_em {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1527.8841,606.6786) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_26_en {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1896.811,819.6786) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_73_eo {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,2080.6813,927.0692) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_30_ep {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,790.8966,181.1786) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_18_eq {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1158.6561,393.5047) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_19_er {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1665.3157,634.8024) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_25_es {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,2034.2426,847.8024) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_74_et {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,2218.1127,955.193) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_29_eu {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,928.3283,209.3024) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_20_ev {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1296.0877,421.6285) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_21_ew {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1344.3371,500.7077) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_28_ex {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1713.264,713.7077) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_32_ey {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,607.3496,75.2077) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_22_ez {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,975.1091,287.5339) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_23_e {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1481.7688,528.8316) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_27_e {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1850.6957,741.8316) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_31_e {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,744.7813,103.3315) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_92 {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,561.136,-3.0847) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_24_e {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1112.5407,315.6577) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	#Group_294 {
+		opacity: 0.1;
+		transform: translate(966.135px, 481.623px) matrix(1,0,0,1,-821.6777,188.2686) rotate(13deg);
+		transform-origin: center;
+		position: absolute;
+		width: 2204.611px;
+		height: 1535.527px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	.Polygon_1_e {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1707.7881,295.0758) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_75_e {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1891.6583,402.4664) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_77_e {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,2075.0787,507.9083) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_79_e {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,2259.1739,616.2732) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_81_fa {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,2440.2701,716.0939) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_5_fb {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1338.5602,81.9019) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_2_fc {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1845.2182,323.1988) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_76_fd {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,2029.0883,430.5895) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_78_fe {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,2212.9584,537.9801) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_80_ff {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,2396.6781,640.2739) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_6_fg {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1475.9902,110.0249) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_3_fh {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1524.2411,189.1049) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_7_fi {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1155.0132,-24.0689) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_83_fj {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,968.9692,-131.984) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_85_fk {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,783.6001,-236.9759) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_90_fl {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,600.8547,-339.4947) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_4_fm {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1661.6729,217.2287) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_8_fn {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1292.4447,4.0548) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_82_fo {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1108.5745,-103.3358) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_84_fp {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,922.5306,-211.2509) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_86_fq {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,737.1615,-316.2429) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_9_fr {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1617.8362,450.8771) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_36_fs {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1802.2997,557.3772) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_68_ft {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1985.0451,659.8959) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_70_fu {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,2168.1659,768.4859) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_72_fv {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,2351.8111,874.9021) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_10_fw {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1248.6083,237.7033) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_11_fx {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1755.2677,479.0009) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_35_fy {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1939.7311,585.5009) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_69_fz {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,2122.1772,691.1677) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_71_f {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,2305.5973,796.6096) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_12_f {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1386.0398,265.827) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_13_f {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1434.289,344.9063) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_14_f {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1065.061,131.7325) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_33_f {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,880.5971,25.2325) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_88_f {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,696.9518,-81.1838) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_91_f {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,513.7565,-185.6513) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_15_f {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1571.721,373.0301) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_16_f {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1202.4926,159.8562) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_34_f {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1018.0282,53.3562) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_87_ga {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,834.383,-53.06) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_89_gb {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,651.1876,-157.5275) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_17_gc {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1527.8841,606.6786) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_26_gd {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1896.811,819.6786) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_73_ge {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,2080.6813,927.0692) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_30_gf {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,790.8966,181.1786) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_18_gg {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1158.6561,393.5047) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_19_gh {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1665.3157,634.8024) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_25_gi {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,2034.2426,847.8024) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_74_gj {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,2218.1127,955.193) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_29_gk {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,928.3283,209.3024) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_20_gl {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1296.0877,421.6285) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_21_gm {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1344.3371,500.7077) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_28_gn {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1713.264,713.7077) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_32_go {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,607.3496,75.2077) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_22_gp {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,975.1091,287.5339) rotate(30deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_23_gq {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1481.7688,528.8316) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_27_gr {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1850.6957,741.8316) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_31_gs {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,744.7813,103.3315) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_92_gt {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,561.136,-3.0847) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Polygon_24_gu {
+		overflow: visible;
+		position: absolute;
+		width: 214.406px;
+		height: 184.833px;
+		transform: translate(-209.783px, 262.551px) matrix(1,0,0,1,1112.5407,315.6577) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	.Rectangle_1506 {
+		position: absolute;
+		overflow: visible;
+		width: 621px;
+		height: 436px;
+		left: 1271px;
+		top: 313px;
+	}
+	#Image_3 {
+		position: absolute;
+		width: 611px;
+		height: 343px;
+		left: 1271px;
+		top: 368px;
+		overflow: visible;
+	}
+	#Group_292 {
+		position: absolute;
+		width: 423.305px;
+		height: 1080px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Side_Menu {
+		position: absolute;
+		width: 423.305px;
+		height: 1080px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	.Sidebar_BG {
+		position: absolute;
+		overflow: visible;
+		width: 423px;
+		height: 1080px;
+		left: 0px;
+		top: 0px;
+	}
+	#Logo {
+		position: absolute;
+		width: 423px;
+		height: 70px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	.BG {
+		filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.051));
+		overflow: visible;
+		position: absolute;
+		width: 432px;
+		height: 79px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Logo_g {
+		position: absolute;
+		left: 20px;
+		top: 23px;
+		overflow: visible;
+		width: 156px;
+		white-space: nowrap;
+		line-height: 21px;
+		margin-top: -0.5px;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 20px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 2px;
+	}
+	#Group_307 {
+		position: absolute;
+		width: 201px;
+		height: 400px;
+		left: 0px;
+		top: 70px;
+		overflow: visible;
+	}
+	#Group_262 {
+		position: absolute;
+		width: 201px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	.BG_g {
+		overflow: visible;
+		position: absolute;
+		width: 201px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.BG_ha {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Hovedforl_b {
+		position: absolute;
+		left: 94.784px;
+		top: 49px;
+		overflow: visible;
+		width: 68px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	.Rectangle_1476 {
+		position: absolute;
+		overflow: visible;
+		width: 166.695px;
+		height: 19px;
+		left: 26px;
+		top: 10px;
+	}
+	#Hold {
+		position: absolute;
+		left: 33.941px;
+		top: 49px;
+		overflow: visible;
+		width: 25px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Programmering {
+		position: absolute;
+		left: 94.695px;
+		top: 67px;
+		overflow: visible;
+		width: 85px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Emne {
+		position: absolute;
+		left: 33.939px;
+		top: 67px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#ID08_15 {
+		position: absolute;
+		left: 94.832px;
+		top: 11px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#N226 {
+		position: absolute;
+		left: 94.834px;
+		top: 31px;
+		overflow: visible;
+		width: 28px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Tid {
+		position: absolute;
+		left: 33.943px;
+		top: 11px;
+		overflow: visible;
+		width: 18px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Lokale {
+		position: absolute;
+		left: 33.938px;
+		top: 31px;
+		overflow: visible;
+		width: 34px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Group_261 {
+		position: absolute;
+		width: 201px;
+		height: 94px;
+		left: 0px;
+		top: 102px;
+		overflow: visible;
+	}
+	.BG_hh {
+		overflow: visible;
+		position: absolute;
+		width: 201px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.BG_hi {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Hovedforl_b_hj {
+		position: absolute;
+		left: 94.784px;
+		top: 49px;
+		overflow: visible;
+		width: 68px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	.Rectangle_1476_hk {
+		position: absolute;
+		overflow: visible;
+		width: 166.695px;
+		height: 19px;
+		left: 26px;
+		top: 10px;
+	}
+	#Hold_hl {
+		position: absolute;
+		left: 33.941px;
+		top: 49px;
+		overflow: visible;
+		width: 25px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Programmering_hm {
+		position: absolute;
+		left: 94.695px;
+		top: 67px;
+		overflow: visible;
+		width: 85px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Emne_hn {
+		position: absolute;
+		left: 33.939px;
+		top: 67px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#ID08_15_ho {
+		position: absolute;
+		left: 94.832px;
+		top: 11px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#N226_hp {
+		position: absolute;
+		left: 94.834px;
+		top: 31px;
+		overflow: visible;
+		width: 28px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Tid_hq {
+		position: absolute;
+		left: 33.943px;
+		top: 11px;
+		overflow: visible;
+		width: 18px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Lokale_hr {
+		position: absolute;
+		left: 33.938px;
+		top: 31px;
+		overflow: visible;
+		width: 34px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Group_257 {
+		position: absolute;
+		width: 201px;
+		height: 94px;
+		left: 0px;
+		top: 204px;
+		overflow: visible;
+	}
+	#Group_260 {
+		position: absolute;
+		width: 201px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	.BG_hu {
+		overflow: visible;
+		position: absolute;
+		width: 201px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.BG_hv {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Hovedforl_b_hw {
+		position: absolute;
+		left: 94.784px;
+		top: 49px;
+		overflow: visible;
+		width: 68px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	.Rectangle_1476_hx {
+		position: absolute;
+		overflow: visible;
+		width: 166.695px;
+		height: 19px;
+		left: 26px;
+		top: 10px;
+	}
+	#Hold_hy {
+		position: absolute;
+		left: 33.941px;
+		top: 49px;
+		overflow: visible;
+		width: 25px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Programmering_hz {
+		position: absolute;
+		left: 94.695px;
+		top: 67px;
+		overflow: visible;
+		width: 85px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Emne_h {
+		position: absolute;
+		left: 33.939px;
+		top: 67px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#ID08_15_h {
+		position: absolute;
+		left: 94.832px;
+		top: 11px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#N226_h {
+		position: absolute;
+		left: 94.834px;
+		top: 31px;
+		overflow: visible;
+		width: 28px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Tid_h {
+		position: absolute;
+		left: 33.943px;
+		top: 11px;
+		overflow: visible;
+		width: 18px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Lokale_h {
+		position: absolute;
+		left: 33.938px;
+		top: 31px;
+		overflow: visible;
+		width: 34px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Group_258 {
+		position: absolute;
+		width: 201px;
+		height: 94px;
+		left: 0px;
+		top: 306px;
+		overflow: visible;
+	}
+	#Group_259 {
+		position: absolute;
+		width: 201px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	.BG_h {
+		overflow: visible;
+		position: absolute;
+		width: 201px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.BG_ia {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Hovedforl_b_h {
+		position: absolute;
+		left: 94.784px;
+		top: 49px;
+		overflow: visible;
+		width: 68px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	.Rectangle_1476_ia {
+		position: absolute;
+		overflow: visible;
+		width: 166.695px;
+		height: 19px;
+		left: 26px;
+		top: 10px;
+	}
+	#Hold_ib {
+		position: absolute;
+		left: 33.941px;
+		top: 49px;
+		overflow: visible;
+		width: 25px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Programmering_ic {
+		position: absolute;
+		left: 94.695px;
+		top: 67px;
+		overflow: visible;
+		width: 85px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Emne_id {
+		position: absolute;
+		left: 33.939px;
+		top: 67px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#ID08_15_ie {
+		position: absolute;
+		left: 94.832px;
+		top: 11px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#N226_if {
+		position: absolute;
+		left: 94.834px;
+		top: 31px;
+		overflow: visible;
+		width: 28px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Tid_ig {
+		position: absolute;
+		left: 33.943px;
+		top: 11px;
+		overflow: visible;
+		width: 18px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Lokale_ih {
+		position: absolute;
+		left: 33.938px;
+		top: 31px;
+		overflow: visible;
+		width: 34px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Group_308 {
+		position: absolute;
+		width: 201px;
+		height: 400px;
+		left: 222px;
+		top: 70px;
+		overflow: visible;
+	}
+	#Group_262_ij {
+		position: absolute;
+		width: 201px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	.BG_ik {
+		overflow: visible;
+		position: absolute;
+		width: 201px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.BG_il {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Hovedforl_b_im {
+		position: absolute;
+		left: 94.784px;
+		top: 49px;
+		overflow: visible;
+		width: 68px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	.Rectangle_1476_in {
+		position: absolute;
+		overflow: visible;
+		width: 166.695px;
+		height: 19px;
+		left: 26px;
+		top: 10px;
+	}
+	#Hold_io {
+		position: absolute;
+		left: 33.941px;
+		top: 49px;
+		overflow: visible;
+		width: 25px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Programmering_ip {
+		position: absolute;
+		left: 94.695px;
+		top: 67px;
+		overflow: visible;
+		width: 85px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Emne_iq {
+		position: absolute;
+		left: 33.939px;
+		top: 67px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#ID08_15_ir {
+		position: absolute;
+		left: 94.832px;
+		top: 11px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#N226_is {
+		position: absolute;
+		left: 94.834px;
+		top: 31px;
+		overflow: visible;
+		width: 28px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Tid_it {
+		position: absolute;
+		left: 33.943px;
+		top: 11px;
+		overflow: visible;
+		width: 18px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Lokale_iu {
+		position: absolute;
+		left: 33.938px;
+		top: 31px;
+		overflow: visible;
+		width: 34px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Group_261_iv {
+		position: absolute;
+		width: 201px;
+		height: 94px;
+		left: 0px;
+		top: 102px;
+		overflow: visible;
+	}
+	.BG_iw {
+		overflow: visible;
+		position: absolute;
+		width: 201px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.BG_ix {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Hovedforl_b_iy {
+		position: absolute;
+		left: 94.784px;
+		top: 49px;
+		overflow: visible;
+		width: 68px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	.Rectangle_1476_iz {
+		position: absolute;
+		overflow: visible;
+		width: 166.695px;
+		height: 19px;
+		left: 26px;
+		top: 10px;
+	}
+	#Hold_i {
+		position: absolute;
+		left: 33.941px;
+		top: 49px;
+		overflow: visible;
+		width: 25px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Programmering_i {
+		position: absolute;
+		left: 94.695px;
+		top: 67px;
+		overflow: visible;
+		width: 85px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Emne_i {
+		position: absolute;
+		left: 33.939px;
+		top: 67px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#ID08_15_i {
+		position: absolute;
+		left: 94.832px;
+		top: 11px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#N226_i {
+		position: absolute;
+		left: 94.834px;
+		top: 31px;
+		overflow: visible;
+		width: 28px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Tid_i {
+		position: absolute;
+		left: 33.943px;
+		top: 11px;
+		overflow: visible;
+		width: 18px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Lokale_i {
+		position: absolute;
+		left: 33.938px;
+		top: 31px;
+		overflow: visible;
+		width: 34px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Group_257_i {
+		position: absolute;
+		width: 201px;
+		height: 94px;
+		left: 0px;
+		top: 204px;
+		overflow: visible;
+	}
+	#Group_260_i {
+		position: absolute;
+		width: 201px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	.BG_i {
+		overflow: visible;
+		position: absolute;
+		width: 201px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.BG_ja {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Hovedforl_b_jb {
+		position: absolute;
+		left: 94.784px;
+		top: 49px;
+		overflow: visible;
+		width: 68px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	.Rectangle_1476_jc {
+		position: absolute;
+		overflow: visible;
+		width: 166.695px;
+		height: 19px;
+		left: 26px;
+		top: 10px;
+	}
+	#Hold_jd {
+		position: absolute;
+		left: 33.941px;
+		top: 49px;
+		overflow: visible;
+		width: 25px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Programmering_je {
+		position: absolute;
+		left: 94.695px;
+		top: 67px;
+		overflow: visible;
+		width: 85px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Emne_jf {
+		position: absolute;
+		left: 33.939px;
+		top: 67px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#ID08_15_jg {
+		position: absolute;
+		left: 94.832px;
+		top: 11px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#N226_jh {
+		position: absolute;
+		left: 94.834px;
+		top: 31px;
+		overflow: visible;
+		width: 28px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Tid_ji {
+		position: absolute;
+		left: 33.943px;
+		top: 11px;
+		overflow: visible;
+		width: 18px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Lokale_jj {
+		position: absolute;
+		left: 33.938px;
+		top: 31px;
+		overflow: visible;
+		width: 34px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Group_258_jk {
+		position: absolute;
+		width: 201px;
+		height: 94px;
+		left: 0px;
+		top: 306px;
+		overflow: visible;
+	}
+	#Group_259_jl {
+		position: absolute;
+		width: 201px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	.BG_jm {
+		overflow: visible;
+		position: absolute;
+		width: 201px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.BG_jn {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Hovedforl_b_jo {
+		position: absolute;
+		left: 94.784px;
+		top: 49px;
+		overflow: visible;
+		width: 68px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	.Rectangle_1476_jp {
+		position: absolute;
+		overflow: visible;
+		width: 166.695px;
+		height: 19px;
+		left: 26px;
+		top: 10px;
+	}
+	#Hold_jq {
+		position: absolute;
+		left: 33.941px;
+		top: 49px;
+		overflow: visible;
+		width: 25px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Programmering_jr {
+		position: absolute;
+		left: 94.695px;
+		top: 67px;
+		overflow: visible;
+		width: 85px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Emne_js {
+		position: absolute;
+		left: 33.939px;
+		top: 67px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#ID08_15_jt {
+		position: absolute;
+		left: 94.832px;
+		top: 11px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#N226_ju {
+		position: absolute;
+		left: 94.834px;
+		top: 31px;
+		overflow: visible;
+		width: 28px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Tid_jv {
+		position: absolute;
+		left: 33.943px;
+		top: 11px;
+		overflow: visible;
+		width: 18px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Lokale_jw {
+		position: absolute;
+		left: 33.938px;
+		top: 31px;
+		overflow: visible;
+		width: 34px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Group_309 {
+		position: absolute;
+		width: 201.305px;
+		height: 400px;
+		left: 0px;
+		top: 490px;
+		overflow: visible;
+	}
+	#Group_262_jy {
+		position: absolute;
+		width: 201.305px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	.BG_jz {
+		overflow: visible;
+		position: absolute;
+		width: 201.305px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.BG_j {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Hovedforl_b_j {
+		position: absolute;
+		left: 95px;
+		top: 49px;
+		overflow: visible;
+		width: 68px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	.Rectangle_1476_j {
+		position: absolute;
+		overflow: visible;
+		width: 167px;
+		height: 19px;
+		left: 26px;
+		top: 10px;
+	}
+	#Hold_j {
+		position: absolute;
+		left: 34px;
+		top: 49px;
+		overflow: visible;
+		width: 25px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Programmering_j {
+		position: absolute;
+		left: 95px;
+		top: 67px;
+		overflow: visible;
+		width: 85px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Emne_j {
+		position: absolute;
+		left: 34px;
+		top: 67px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#ID08_15_j {
+		position: absolute;
+		left: 95px;
+		top: 11px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#N226_j {
+		position: absolute;
+		left: 95px;
+		top: 31px;
+		overflow: visible;
+		width: 28px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Tid_j {
+		position: absolute;
+		left: 34px;
+		top: 11px;
+		overflow: visible;
+		width: 18px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Lokale_j {
+		position: absolute;
+		left: 34px;
+		top: 31px;
+		overflow: visible;
+		width: 34px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Group_261_ka {
+		position: absolute;
+		width: 201.305px;
+		height: 94px;
+		left: 0px;
+		top: 102px;
+		overflow: visible;
+	}
+	.BG_kb {
+		overflow: visible;
+		position: absolute;
+		width: 201.305px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.BG_kc {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Hovedforl_b_kd {
+		position: absolute;
+		left: 95px;
+		top: 49px;
+		overflow: visible;
+		width: 68px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	.Rectangle_1476_ke {
+		position: absolute;
+		overflow: visible;
+		width: 167px;
+		height: 19px;
+		left: 26px;
+		top: 10px;
+	}
+	#Hold_kf {
+		position: absolute;
+		left: 34px;
+		top: 49px;
+		overflow: visible;
+		width: 25px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Programmering_kg {
+		position: absolute;
+		left: 95px;
+		top: 67px;
+		overflow: visible;
+		width: 85px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Emne_kh {
+		position: absolute;
+		left: 34px;
+		top: 67px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#ID08_15_ki {
+		position: absolute;
+		left: 95px;
+		top: 11px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#N226_kj {
+		position: absolute;
+		left: 95px;
+		top: 31px;
+		overflow: visible;
+		width: 28px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Tid_kk {
+		position: absolute;
+		left: 34px;
+		top: 11px;
+		overflow: visible;
+		width: 18px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Lokale_kl {
+		position: absolute;
+		left: 34px;
+		top: 31px;
+		overflow: visible;
+		width: 34px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Group_257_km {
+		position: absolute;
+		width: 201.305px;
+		height: 94px;
+		left: 0px;
+		top: 204px;
+		overflow: visible;
+	}
+	#Group_260_kn {
+		position: absolute;
+		width: 201.305px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	.BG_ko {
+		overflow: visible;
+		position: absolute;
+		width: 201.305px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.BG_kp {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Hovedforl_b_kq {
+		position: absolute;
+		left: 95px;
+		top: 49px;
+		overflow: visible;
+		width: 68px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	.Rectangle_1476_kr {
+		position: absolute;
+		overflow: visible;
+		width: 167px;
+		height: 19px;
+		left: 26px;
+		top: 10px;
+	}
+	#Hold_ks {
+		position: absolute;
+		left: 34px;
+		top: 49px;
+		overflow: visible;
+		width: 25px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Programmering_kt {
+		position: absolute;
+		left: 95px;
+		top: 67px;
+		overflow: visible;
+		width: 85px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Emne_ku {
+		position: absolute;
+		left: 34px;
+		top: 67px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#ID08_15_kv {
+		position: absolute;
+		left: 95px;
+		top: 11px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#N226_kw {
+		position: absolute;
+		left: 95px;
+		top: 31px;
+		overflow: visible;
+		width: 28px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Tid_kx {
+		position: absolute;
+		left: 34px;
+		top: 11px;
+		overflow: visible;
+		width: 18px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Lokale_ky {
+		position: absolute;
+		left: 34px;
+		top: 31px;
+		overflow: visible;
+		width: 34px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Group_258_kz {
+		position: absolute;
+		width: 201.305px;
+		height: 94px;
+		left: 0px;
+		top: 306px;
+		overflow: visible;
+	}
+	#Group_259_k {
+		position: absolute;
+		width: 201.305px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	.BG_k {
+		overflow: visible;
+		position: absolute;
+		width: 201.305px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.BG_la {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Hovedforl_b_k {
+		position: absolute;
+		left: 95px;
+		top: 49px;
+		overflow: visible;
+		width: 68px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	.Rectangle_1476_k {
+		position: absolute;
+		overflow: visible;
+		width: 167px;
+		height: 19px;
+		left: 26px;
+		top: 10px;
+	}
+	#Hold_k {
+		position: absolute;
+		left: 34px;
+		top: 49px;
+		overflow: visible;
+		width: 25px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Programmering_k {
+		position: absolute;
+		left: 95px;
+		top: 67px;
+		overflow: visible;
+		width: 85px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Emne_k {
+		position: absolute;
+		left: 34px;
+		top: 67px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#ID08_15_k {
+		position: absolute;
+		left: 95px;
+		top: 11px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#N226_k {
+		position: absolute;
+		left: 95px;
+		top: 31px;
+		overflow: visible;
+		width: 28px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Tid_la {
+		position: absolute;
+		left: 34px;
+		top: 11px;
+		overflow: visible;
+		width: 18px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Lokale_lb {
+		position: absolute;
+		left: 34px;
+		top: 31px;
+		overflow: visible;
+		width: 34px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Group_310 {
+		position: absolute;
+		width: 201.305px;
+		height: 400px;
+		left: 222px;
+		top: 490px;
+		overflow: visible;
+	}
+	#Group_262_ld {
+		position: absolute;
+		width: 201.305px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	.BG_le {
+		overflow: visible;
+		position: absolute;
+		width: 201.305px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.BG_lf {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Hovedforl_b_lg {
+		position: absolute;
+		left: 95px;
+		top: 49px;
+		overflow: visible;
+		width: 68px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	.Rectangle_1476_lh {
+		position: absolute;
+		overflow: visible;
+		width: 167px;
+		height: 19px;
+		left: 26px;
+		top: 10px;
+	}
+	#Hold_li {
+		position: absolute;
+		left: 34px;
+		top: 49px;
+		overflow: visible;
+		width: 25px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Programmering_lj {
+		position: absolute;
+		left: 95px;
+		top: 67px;
+		overflow: visible;
+		width: 85px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Emne_lk {
+		position: absolute;
+		left: 34px;
+		top: 67px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#ID08_15_ll {
+		position: absolute;
+		left: 95px;
+		top: 11px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#N226_lm {
+		position: absolute;
+		left: 95px;
+		top: 31px;
+		overflow: visible;
+		width: 28px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Tid_ln {
+		position: absolute;
+		left: 34px;
+		top: 11px;
+		overflow: visible;
+		width: 18px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Lokale_lo {
+		position: absolute;
+		left: 34px;
+		top: 31px;
+		overflow: visible;
+		width: 34px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Group_261_lp {
+		position: absolute;
+		width: 201.305px;
+		height: 94px;
+		left: 0px;
+		top: 102px;
+		overflow: visible;
+	}
+	.BG_lq {
+		overflow: visible;
+		position: absolute;
+		width: 201.305px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.BG_lr {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Hovedforl_b_ls {
+		position: absolute;
+		left: 95px;
+		top: 49px;
+		overflow: visible;
+		width: 68px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	.Rectangle_1476_lt {
+		position: absolute;
+		overflow: visible;
+		width: 167px;
+		height: 19px;
+		left: 26px;
+		top: 10px;
+	}
+	#Hold_lu {
+		position: absolute;
+		left: 34px;
+		top: 49px;
+		overflow: visible;
+		width: 25px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Programmering_lv {
+		position: absolute;
+		left: 95px;
+		top: 67px;
+		overflow: visible;
+		width: 85px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Emne_lw {
+		position: absolute;
+		left: 34px;
+		top: 67px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#ID08_15_lx {
+		position: absolute;
+		left: 95px;
+		top: 11px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#N226_ly {
+		position: absolute;
+		left: 95px;
+		top: 31px;
+		overflow: visible;
+		width: 28px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Tid_lz {
+		position: absolute;
+		left: 34px;
+		top: 11px;
+		overflow: visible;
+		width: 18px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Lokale_l {
+		position: absolute;
+		left: 34px;
+		top: 31px;
+		overflow: visible;
+		width: 34px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Group_257_l {
+		position: absolute;
+		width: 201.305px;
+		height: 94px;
+		left: 0px;
+		top: 204px;
+		overflow: visible;
+	}
+	#Group_260_l {
+		position: absolute;
+		width: 201.305px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	.BG_l {
+		overflow: visible;
+		position: absolute;
+		width: 201.305px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.BG_ma {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Hovedforl_b_l {
+		position: absolute;
+		left: 95px;
+		top: 49px;
+		overflow: visible;
+		width: 68px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	.Rectangle_1476_l {
+		position: absolute;
+		overflow: visible;
+		width: 167px;
+		height: 19px;
+		left: 26px;
+		top: 10px;
+	}
+	#Hold_l {
+		position: absolute;
+		left: 34px;
+		top: 49px;
+		overflow: visible;
+		width: 25px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Programmering_l {
+		position: absolute;
+		left: 95px;
+		top: 67px;
+		overflow: visible;
+		width: 85px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Emne_l {
+		position: absolute;
+		left: 34px;
+		top: 67px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#ID08_15_ma {
+		position: absolute;
+		left: 95px;
+		top: 11px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#N226_mb {
+		position: absolute;
+		left: 95px;
+		top: 31px;
+		overflow: visible;
+		width: 28px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Tid_mc {
+		position: absolute;
+		left: 34px;
+		top: 11px;
+		overflow: visible;
+		width: 18px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Lokale_md {
+		position: absolute;
+		left: 34px;
+		top: 31px;
+		overflow: visible;
+		width: 34px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Group_258_me {
+		position: absolute;
+		width: 201.305px;
+		height: 94px;
+		left: 0px;
+		top: 306px;
+		overflow: visible;
+	}
+	#Group_259_mf {
+		position: absolute;
+		width: 201.305px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	.BG_mg {
+		overflow: visible;
+		position: absolute;
+		width: 201.305px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.BG_mh {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Hovedforl_b_mi {
+		position: absolute;
+		left: 95px;
+		top: 49px;
+		overflow: visible;
+		width: 68px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	.Rectangle_1476_mj {
+		position: absolute;
+		overflow: visible;
+		width: 167px;
+		height: 19px;
+		left: 26px;
+		top: 10px;
+	}
+	#Hold_mk {
+		position: absolute;
+		left: 34px;
+		top: 49px;
+		overflow: visible;
+		width: 25px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Programmering_ml {
+		position: absolute;
+		left: 95px;
+		top: 67px;
+		overflow: visible;
+		width: 85px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Emne_mm {
+		position: absolute;
+		left: 34px;
+		top: 67px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#ID08_15_mn {
+		position: absolute;
+		left: 95px;
+		top: 11px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#N226_mo {
+		position: absolute;
+		left: 95px;
+		top: 31px;
+		overflow: visible;
+		width: 28px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Tid_mp {
+		position: absolute;
+		left: 34px;
+		top: 11px;
+		overflow: visible;
+		width: 18px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Lokale_mq {
+		position: absolute;
+		left: 34px;
+		top: 31px;
+		overflow: visible;
+		width: 34px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+	}
+	#Group_270 {
+		position: absolute;
+		width: 262px;
+		height: 68px;
+		left: 65px;
+		top: 952px;
+		overflow: visible;
+	}
+	#Logo_ms {
+		filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.161));
+		position: absolute;
+		left: 119px;
+		top: 33px;
+		overflow: visible;
+		width: 132px;
+		white-space: nowrap;
+		line-height: 24px;
+		margin-top: -0.5px;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 23px;
+		color: rgba(164,175,183,1);
+	}
+	#Logo_mt {
+		filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.161));
+		position: absolute;
+		left: 119px;
+		top: 5px;
+		overflow: visible;
+		width: 144px;
+		white-space: nowrap;
+		line-height: 24px;
+		margin-top: -0.5px;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 23px;
+		color: rgba(255,255,255,1);
+	}
+	#Image_1 {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.2));
+		position: absolute;
+		width: 95px;
+		height: 68px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Group_291 {
+		position: absolute;
+		width: 792px;
+		height: 468px;
+		left: 451px;
+		top: 28px;
+		overflow: visible;
+	}
+	.Rectangle_1495 {
+		filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.102));
+		position: absolute;
+		overflow: visible;
+		width: 828px;
+		height: 504px;
+		left: 0px;
+		top: 0px;
+	}
+	#OVERETAGEN_N_GANGEN {
+		position: absolute;
+		left: 27px;
+		top: 45px;
+		overflow: visible;
+		width: 218px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 20px;
+		color: rgba(26,26,43,1);
+	}
+	#Logo_my {
+		opacity: 0.3;
+		position: absolute;
+		left: 27px;
+		top: 25px;
+		overflow: visible;
+		width: 246px;
+		white-space: nowrap;
+		line-height: 21px;
+		margin-top: -0.5px;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 20px;
+		color: rgba(26,26,43,1);
+		letter-spacing: 0.8px;
+	}
+	#N200___N228 {
+		position: absolute;
+		left: 27px;
+		top: 70px;
+		overflow: visible;
+		width: 81px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: lighter;
+		font-size: 13px;
+		color: rgba(26,26,43,1);
+	}
+	#Group_290 {
+		position: absolute;
+		width: 621px;
+		height: 257px;
+		left: 1271px;
+		top: 28px;
+		overflow: visible;
+	}
+	#Group_274 {
+		position: absolute;
+		width: 621px;
+		height: 257px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	.Rectangle_1477 {
+		filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.102));
+		position: absolute;
+		overflow: visible;
+		width: 657px;
+		height: 293px;
+		left: 0px;
+		top: 0px;
+	}
+	#Group_275 {
+		position: absolute;
+		width: 256px;
+		height: 199px;
+		left: 288px;
+		top: 29px;
+		overflow: visible;
+	}
+	#ID08_15_m {
+		position: absolute;
+		left: 0px;
+		top: 114px;
+		overflow: visible;
+		width: 147px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 60px;
+		color: rgba(245,246,250,1);
+	}
+	#Mandag_3__Februar_2020 {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+		width: 257px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 40px;
+		color: rgba(206,207,208,1);
+	}
+	#ID8C_ {
+		position: absolute;
+		left: 82px;
+		top: 20px;
+		overflow: visible;
+		width: 131px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 120px;
+		color: rgba(255,255,255,1);
+	}
+	#Let_regn {
+		position: absolute;
+		left: 77px;
+		top: 169px;
+		overflow: visible;
+		width: 89px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 26px;
+		color: rgba(255,255,255,1);
+	}
+	#Group_272 {
+		position: absolute;
+		width: 792px;
+		height: 226px;
+		left: 451px;
+		top: 524px;
+		overflow: visible;
+	}
+	.Rectangle_1477_m {
+		filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.102));
+		position: absolute;
+		overflow: visible;
+		width: 828px;
+		height: 262px;
+		left: 0px;
+		top: 0px;
+	}
+	#Lorem_ipsum_dolor_sit_amet__co {
+		position: absolute;
+		left: 20px;
+		top: 95px;
+		overflow: hidden;
+		width: 753px;
+		height: 111px;
+		line-height: 28px;
+		margin-top: -5.5px;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(206,207,208,1);
+	}
+	#Ny_kantine_p__Medie {
+		position: absolute;
+		left: 20px;
+		top: 46.954px;
+		overflow: visible;
+		width: 225px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 25px;
+		color: rgba(245,246,250,1);
+	}
+	#ID27__Januar_2019 {
+		position: absolute;
+		left: 20px;
+		top: 20px;
+		overflow: visible;
+		width: 106px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(206,207,208,1);
+	}
+	#Group_268 {
+		position: absolute;
+		width: 792px;
+		height: 226px;
+		left: 451px;
+		top: 777px;
+		overflow: visible;
+	}
+	.Rectangle_1477_ne {
+		filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.102));
+		position: absolute;
+		overflow: visible;
+		width: 828px;
+		height: 262px;
+		left: 0px;
+		top: 0px;
+	}
+	#Lorem_ipsum_dolor_sit_amet__co_nf {
+		position: absolute;
+		left: 20px;
+		top: 95px;
+		overflow: hidden;
+		width: 753px;
+		height: 111px;
+		line-height: 28px;
+		margin-top: -5.5px;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(206,207,208,1);
+	}
+	#Mediehus_Projekt_i_Marts {
+		position: absolute;
+		left: 20px;
+		top: 46.116px;
+		overflow: visible;
+		width: 274px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 25px;
+		color: rgba(245,246,250,1);
+	}
+	#ID27__Januar_2019_nh {
+		position: absolute;
+		left: 20px;
+		top: 23px;
+		overflow: visible;
+		width: 106px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(206,207,208,1);
+	}
+	.Rectangle_1505 {
+		position: absolute;
+		overflow: visible;
+		width: 1497px;
+		height: 50px;
+		left: 415px;
+		top: 1031px;
+	}
+	.Rectangle_1491 {
+		position: absolute;
+		overflow: visible;
+		width: 621px;
+		height: 226px;
+		left: 1271px;
+		top: 777px;
+	}
+	#Group_281 {
+		position: absolute;
+		width: 448.377px;
+		height: 135px;
+		left: 1357.001px;
+		top: 830px;
+		overflow: visible;
+	}
+	#bus {
+		position: absolute;
+		width: 77.867px;
+		height: 77.882px;
+		left: 0px;
+		top: 30.23px;
+		overflow: visible;
+	}
+	#Group_278 {
+		position: absolute;
+		width: 74.84px;
+		height: 60.404px;
+		left: 1.521px;
+		top: 15.957px;
+		overflow: visible;
+	}
+	.Path_404 {
+		overflow: visible;
+		position: absolute;
+		width: 8.519px;
+		height: 10.496px;
+		left: 14.177px;
+		top: 49.909px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Path_405 {
+		overflow: visible;
+		position: absolute;
+		width: 8.519px;
+		height: 10.496px;
+		left: 52.189px;
+		top: 49.909px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Path_406 {
+		overflow: visible;
+		position: absolute;
+		width: 6.085px;
+		height: 11.774px;
+		left: 68.755px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Path_407 {
+		overflow: visible;
+		position: absolute;
+		width: 6.085px;
+		height: 11.774px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Path_408 {
+		overflow: visible;
+		position: absolute;
+		width: 55.354px;
+		height: 64.344px;
+		left: 11.271px;
+		top: 1.521px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Path_409 {
+		overflow: visible;
+		position: absolute;
+		width: 55.369px;
+		height: 32.978px;
+		left: 11.257px;
+		top: 13.69px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Group_279 {
+		position: absolute;
+		width: 41.375px;
+		height: 6.085px;
+		left: 18.254px;
+		top: 53.225px;
+		overflow: visible;
+	}
+	.Ellipse_50 {
+		position: absolute;
+		overflow: visible;
+		width: 6.085px;
+		height: 6.085px;
+		left: 0px;
+		top: 0px;
+	}
+	.Ellipse_51 {
+		position: absolute;
+		overflow: visible;
+		width: 6.085px;
+		height: 6.085px;
+		left: 35.29px;
+		top: 0px;
+	}
+	.Rectangle_1487 {
+		position: absolute;
+		overflow: visible;
+		width: 15.82px;
+		height: 6.085px;
+		left: 31.047px;
+		top: 53.225px;
+	}
+	.Rectangle_1488 {
+		position: absolute;
+		overflow: visible;
+		width: 21px;
+		height: 7px;
+		left: 28.377px;
+		top: 6.77px;
+	}
+	.Path_410 {
+		overflow: visible;
+		position: absolute;
+		width: 3.043px;
+		height: 3.042px;
+		left: 37.663px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Path_411 {
+		overflow: visible;
+		position: absolute;
+		width: 77.867px;
+		height: 77.882px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Path_412 {
+		overflow: visible;
+		position: absolute;
+		width: 9.127px;
+		height: 9.127px;
+		left: 16.732px;
+		top: 51.703px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Path_413 {
+		overflow: visible;
+		position: absolute;
+		width: 9.127px;
+		height: 9.127px;
+		left: 52.022px;
+		top: 51.703px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Path_414 {
+		overflow: visible;
+		position: absolute;
+		width: 18.862px;
+		height: 9.127px;
+		left: 29.524px;
+		top: 51.703px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Bus_18_ {
+		position: absolute;
+		left: 9.377px;
+		top: 0px;
+		overflow: visible;
+		width: 60px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(255,255,255,1);
+	}
+	#Bus_17 {
+		position: absolute;
+		left: 381.378px;
+		top: 0px;
+		overflow: visible;
+		width: 56px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(255,255,255,1);
+	}
+	#Mod_Aalborg_busterminal_ {
+		position: absolute;
+		left: 106.378px;
+		top: 57px;
+		overflow: visible;
+		width: 216px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(255,255,255,1);
+	}
+	#bus_gul {
+		position: absolute;
+		width: 77.313px;
+		height: 77.313px;
+		left: 371.063px;
+		top: 30.69px;
+		overflow: visible;
+	}
+	.Path_415 {
+		overflow: visible;
+		position: absolute;
+		width: 8.457px;
+		height: 10.419px;
+		left: 15.578px;
+		top: 65.384px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Path_416 {
+		overflow: visible;
+		position: absolute;
+		width: 8.457px;
+		height: 10.419px;
+		left: 53.316px;
+		top: 65.384px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Path_417 {
+		overflow: visible;
+		position: absolute;
+		width: 6.039px;
+		height: 11.683px;
+		left: 69.764px;
+		top: 15.844px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Path_418 {
+		overflow: visible;
+		position: absolute;
+		width: 6.041px;
+		height: 11.683px;
+		left: 1.51px;
+		top: 15.844px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Path_419 {
+		overflow: visible;
+		position: absolute;
+		width: 54.943px;
+		height: 63.874px;
+		left: 11.195px;
+		top: 1.51px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Path_420 {
+		overflow: visible;
+		position: absolute;
+		width: 54.965px;
+		height: 32.731px;
+		left: 11.174px;
+		top: 13.591px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Ellipse_52 {
+		position: absolute;
+		overflow: visible;
+		width: 6.041px;
+		height: 6.04px;
+		left: 18.127px;
+		top: 52.833px;
+	}
+	.Ellipse_53 {
+		position: absolute;
+		overflow: visible;
+		width: 6.041px;
+		height: 6.04px;
+		left: 53.146px;
+		top: 52.833px;
+	}
+	.Rectangle_1489 {
+		position: absolute;
+		overflow: visible;
+		width: 15.705px;
+		height: 6.04px;
+		left: 30.816px;
+		top: 52.833px;
+	}
+	.Rectangle_1490 {
+		position: absolute;
+		overflow: visible;
+		width: 20px;
+		height: 7px;
+		left: 28.313px;
+		top: 7.31px;
+	}
+	.Path_421 {
+		overflow: visible;
+		position: absolute;
+		width: 3.02px;
+		height: 3.021px;
+		left: 37.385px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Path_422 {
+		overflow: visible;
+		position: absolute;
+		width: 77.313px;
+		height: 77.313px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Path_423 {
+		overflow: visible;
+		position: absolute;
+		width: 9.061px;
+		height: 9.06px;
+		left: 16.609px;
+		top: 51.323px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Path_424 {
+		overflow: visible;
+		position: absolute;
+		width: 9.061px;
+		height: 9.06px;
+		left: 51.643px;
+		top: 51.323px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Path_425 {
+		overflow: visible;
+		position: absolute;
+		width: 18.725px;
+		height: 9.06px;
+		left: 29.307px;
+		top: 51.323px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#_18_min {
+		position: absolute;
+		left: 8.377px;
+		top: 107px;
+		overflow: visible;
+		width: 61px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(255,255,255,1);
+	}
+	#ID17_min {
+		position: absolute;
+		left: 381.378px;
+		top: 107px;
+		overflow: visible;
+		width: 57px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(255,255,255,1);
+	}
+	
+	
+	.aktiviteterBg{
+		list-style-type: none;
+		background-color: #43425d;
+		width: 415px;
+		height: 100vh;
+		position: absolute;
+	}
+	
+	h2{
+		padding: 20px;
+		letter-spacing: 3px;
+	}
+	
+	.aktiviteterGrid{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(1fr);
+		grid-gap: 10px;
+	}
+	//#3674B5 // - den blå farve
+	//#78952b //- den grønne farve
+	//#7D2772 //- den lilla farve
+	//#A83331 //- den rød farve
+	
+	
+	.aktivitet {
+		position: relative;
+		width: 200px;
+		height: 94px;
+		overflow: visible;
+		// svg elements farve    
+	}
+	.Bg {
+		overflow: visible;
+		position: absolute;
+		width: 200px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.before {
+		overflow: visible;
+		position: absolute;
+		width: 16px;
+		height: 94px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.holdNavn {
+		position: absolute;
+		left: 95px;
+		top: 49px;
+		overflow: visible;
+		width: 68px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+	}
+	.tidBg {
+		overflow: visible;
+		position: absolute;
+		width: 167px;
+		height: 19px;
+		left: 26px;
+		top: 10px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.hold {
+		position: absolute;
+		left: 34px;
+		top: 49px;
+		overflow: visible;
+		width: 25px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+	}
+	.emneNavn {
+		position: absolute;
+		left: 95px;
+		top: 67px;
+		overflow: visible;
+		width: 85px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+	}
+	.emne {
+		position: absolute;
+		left: 34px;
+		top: 67px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+	}
+	.tidStart {
+		position: absolute;
+		left: 95px;
+		top: 11px;
+		overflow: visible;
+		width: 30px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+	}
+	.lokaleNummer {
+		position: absolute;
+		left: 95px;
+		top: 31px;
+		overflow: visible;
+		width: 28px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+	}
+	.tid {
+		position: absolute;
+		left: 34px;
+		top: 11px;
+		overflow: visible;
+		width: 18px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+	}
+	.lokale {
+		position: absolute;
+		left: 34px;
+		top: 31px;
+		overflow: visible;
+		width: 34px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+	
+	}
+	
+	
+	

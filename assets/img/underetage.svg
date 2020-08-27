@@ -1,0 +1,200 @@
+
+        <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="135 70 1300.3 510.4">
+          <defs>
+            <style>
+              .cls-1,
+              .cls-2,
+              .cls-3 {
+                fill: none;
+              }
+
+              .cls-2,
+              .cls-3 {
+                stroke: #000;
+                stroke-miterlimit: 10;
+              }
+
+              .cls-2 {
+                stroke-width: 1.24px;
+              }
+
+              .cls-3 {
+                stroke-width: 2px;
+              }
+
+              .cls-4,
+              .cls-5 {
+                isolation: isolate;
+                font-family: SourceSansPro-SemiBold, Source Sans Pro;
+               
+              }
+
+              .cls-4 {
+                font-size: 19.64px;
+              }
+
+              .cls-5 {
+                font-size: 19.64px;
+              }
+
+              .cls-6 {
+                clip-path: url(#clip-path);
+              }
+
+              .cls-7 {
+                clip-path: url(#clip-path-2);
+              }
+
+              .cls-8 {
+                clip-path: url(#clip-path-3);
+              }
+
+              .cls-9 {
+                clip-path: url(#clip-path-4);
+              }
+
+              .cls-10 {
+                clip-path: url(#clip-path-5);
+              }
+
+              .cls-11 {
+                clip-path: url(#clip-path-6);
+              }
+
+              .cls-12 {
+                clip-path: url(#clip-path-7);
+              }
+
+              .cls-13 {
+                clip-path: url(#clip-path-8);
+              }
+
+              .cls-14 {
+                clip-path: url(#clip-path-9);
+              }
+
+              .cls-15 {
+                clip-path: url(#clip-path-10);
+              }
+
+              .cls-16 {
+                clip-path: url(#clip-path-11);
+              }
+
+              .cls-17 {
+                clip-path: url(#clip-path-12);
+              }
+            </style>
+            <clipPath id="clip-path">
+              <rect class="cls-1" x="331" y="249.21" width="19" height="8" />
+            </clipPath>
+            <clipPath id="clip-path-2">
+              <rect class="cls-1" x="587" y="249.21" width="19" height="8" />
+            </clipPath>
+            <clipPath id="clip-path-3">
+              <rect class="cls-1" x="782" y="249.21" width="19" height="8" />
+            </clipPath>
+            <clipPath id="clip-path-4">
+              <rect class="cls-1" x="331" y="343.21" width="19" height="8" />
+            </clipPath>
+            <clipPath id="clip-path-5">
+              <rect class="cls-1" x="606" y="314.21" width="19" height="8" />
+            </clipPath>
+            <clipPath id="clip-path-6">
+              <rect class="cls-1" x="986" y="387.21" width="19" height="8" />
+            </clipPath>
+            <clipPath id="clip-path-7">
+              <rect class="cls-1" x="456" y="306.21" width="19" height="8" />
+            </clipPath>
+            <clipPath id="clip-path-8">
+              <rect class="cls-1" x="393" y="306.21" width="19" height="8" />
+            </clipPath>
+            <clipPath id="clip-path-9">
+              <rect class="cls-1" x="1180" y="248.21" width="19" height="8" />
+            </clipPath>
+            <clipPath id="clip-path-10">
+              <rect class="cls-1" x="1161" y="248.21" width="19" height="8" />
+            </clipPath>
+            <clipPath id="clip-path-11">
+              <rect class="cls-1" x="1349" y="312.21" width="19" height="8" />
+            </clipPath>
+            <clipPath id="clip-path-12">
+              <rect class="cls-1" x="1358" y="406.21" width="19" height="8" />
+            </clipPath>
+            <symbol id="dør" data-name="dør" viewBox="0 0 18.89 14.73">
+              <line class="cls-2" x1="0.62" y1="0.62" x2="17.89" y2="0.62" />
+              <path class="cls-3" d="M17.89.62c0,7.25-7.73,13.11-17.27,13.11" />
+              <line class="cls-2" x1="0.62" y1="13.73" x2="0.62" y2="0.62" />
+            </symbol>
+          </defs>
+         
+          <g id="stuen">
+            <g id="stuen_kort" data-name="stuen kort">
+              <line class="cls-3" x1="429" y1="357.21" x2="429" y2="306.21" />
+              <rect class="cls-3" x="377" y="306.21" width="141" height="51" />
+              <rect class="cls-3" x="695" y="140.21" width="712" height="366" />
+              <polygon class="cls-3" points="518.02 314.21 695 314.21 695 506.21 518 506.39 518.02 314.21" />
+              <rect class="cls-3" x="255" y="140.21" width="439" height="117" />
+              <line class="cls-3" x1="164" y1="258.21" x2="164" y2="506.21" />
+              <rect class="cls-3" x="1314" y="312.21" width="93" height="195" />
+              <line class="cls-3" x1="1407" y1="405.21" x2="1314" y2="405.21" />
+              <line class="cls-3" x1="1406" y1="256.21" x2="1311" y2="256.21" />
+              <line class="cls-3" x1="1049" y1="315.21" x2="1049" y2="388.21" />
+              <rect class="cls-3" x="959" y="386.21" width="90" height="120" />
+              <rect class="cls-3" x="695" y="140.21" width="261" height="117" />
+              <line class="cls-3" x1="782" y1="314.21" x2="688" y2="314.21" />
+              <rect class="cls-3" x="1132" y="140.21" width="92" height="116" />
+            </g>
+            <line class="cls-3" x1="377" y1="342.21" x2="296" y2="342.21" />
+            <line class="cls-3" x1="519" y1="506.21" x2="164" y2="506.33" />
+          </g>
+          <line class="cls-3" x1="256" y1="140.21" x2="163" y2="140.21" />
+          <line class="cls-3" x1="163" y1="232.21" x2="163" y2="140.21" /><text class="cls-4"
+            transform="translate(342.75 417.02)">N111</text><text class="cls-4"
+            transform="translate(593.23 417.48)">M112B</text><text class="cls-4" transform="translate(424.14 200.99)">N
+            121</text><text class="cls-4" transform="translate(769.63 201.5)">N120</text><text class="cls-4"
+            transform="translate(732.18 417.48)">N113</text><text class="cls-5"
+            transform="translate(1089.42 422.55) scale(0.94 1)">N114</text><text class="cls-4"
+            transform="translate(1253.24 201.5)">N217</text><text class="cls-4"
+            transform="translate(985.08 201.5)">N119</text>
+          <g class="cls-6">
+            <use width="18.89" height="14.73" transform="matrix(1.01, 0, 0, -0.56, 331, 256.94)" xlink:href="#dør" />
+          </g>
+          <g class="cls-7">
+            <use width="18.89" height="14.73" transform="matrix(0.95, 0, 0, -0.56, 588, 257.94)" xlink:href="#dør" />
+          </g>
+          <g class="cls-8">
+            <use width="18.89" height="14.73" transform="matrix(0.95, 0, 0, -0.56, 783, 257.94)" xlink:href="#dør" />
+          </g>
+          <g class="cls-9">
+            <use width="18.89" height="14.73" transform="translate(331 342.21) scale(1.01 0.61)" xlink:href="#dør" />
+          </g>
+          <g class="cls-10">
+            <use width="18.89" height="14.73" transform="translate(606 314.21) scale(1.01 0.54)" xlink:href="#dør" />
+          </g>
+          <g class="cls-11">
+            <use width="18.89" height="14.73" transform="matrix(-1.01, 0, 0, 0.56, 1005, 386.48)" xlink:href="#dør" />
+          </g>
+          <g class="cls-12">
+            <use width="18.89" height="14.73" transform="translate(456 306.21) scale(1.01 0.54)" xlink:href="#dør" />
+          </g>
+          <g class="cls-13">
+            <use width="18.89" height="14.73" transform="matrix(-1.01, 0, 0, 0.56, 412, 306.48)" xlink:href="#dør" />
+          </g>
+          <g class="cls-14">
+            <use width="18.89" height="14.73" transform="matrix(1.01, 0, 0, -0.56, 1180, 255.94)" xlink:href="#dør" />
+          </g>
+          <g class="cls-15">
+            <use width="18.89" height="14.73" transform="translate(1180 255.94) rotate(180) scale(0.95 0.56)"
+              xlink:href="#dør" />
+          </g>
+          <g class="cls-16">
+            <use width="18.89" height="14.73" transform="translate(1349 312.21) scale(1.01 0.54)" xlink:href="#dør" />
+          </g>
+          <g class="cls-17">
+            <use width="18.89" height="14.73" transform="translate(1358 405.21) scale(1.01 0.61)" xlink:href="#dør" />
+          </g>
+          <line class="cls-3" x1="296" y1="341.21" x2="296" y2="354.21" />
+          <line class="cls-3" x1="163" y1="355.21" x2="295" y2="353.84" />
+        </svg>

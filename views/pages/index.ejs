@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link rel="stylesheet" href="../../assets/css/main.css">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+
+</head>
+<body onload="startTime()">
+<div id="Project">
+		<ul class="aktiviteterBg">
+			<h2>AKTIVITETER</h2>
+			<div class="aktiviteterGrid">
+			  <% active.forEach(elem => {  %>
+		
+		
+			  <div class="aktivitet">
+				<svg class="Bg" viewBox="0 0 201.305 94">
+				  <path fill="rgba(50,50,69,1)" class="pathBg" d="M 0 0 L 201.3046875 0 L 201.3046875 94 L 0 94 L 0 0 Z">
+				  </path>
+				</svg>
+				<svg class="before" viewBox="0 0 16 94">
+				  <% switch (elem.color) {
+					case "green": %>
+					<path fill="#78952b" class="pathbefore" d="M 0 0 L 16 0 L 16 94 L 0 94 L 0 0 Z">
+							<% break;
+					case "red": %>
+					<path fill="#A83331" class="pathbefore" d="M 0 0 L 16 0 L 16 94 L 0 94 L 0 0 Z">
+							<% break;
+					case "purple": %>
+					<path fill="#7D2772" class="pathbefore" d="M 0 0 L 16 0 L 16 94 L 0 94 L 0 0 Z">
+							<% break;
+					case "blue": %>
+					<path fill="#3674B5" class="pathbefore" d="M 0 0 L 16 0 L 16 94 L 0 94 L 0 0 Z">
+							<% break;
+					default: case "grey": %>
+					<path fill="#808080" class="pathbefore" d="M 0 0 L 16 0 L 16 94 L 0 94 L 0 0 Z">
+							<% break;
+					} %>
+		
+				 
+				  </path>
+				</svg>
+				<div class="holdNavn">
+				  <span><%= elem.class %></span>
+				</div>
+				<svg class="tidBg" viewBox="0 0 167 19">
+				  <path fill="rgba(36,36,57,1)" class="pathtidBg"
+					d="M 9.5 0 L 157.5 0 C 162.7467041015625 0 167 4.253294467926025 167 9.5 C 167 14.74670600891113 162.7467041015625 19 157.5 19 L 9.5 19 C 4.253294467926025 19 0 14.74670600891113 0 9.5 C 0 4.253294467926025 4.253294467926025 0 9.5 0 Z">
+				  </path>
+				</svg>
+				<div class="hold">
+				  <span>Hold</span>
+				</div>
+				<div class="emneNavn">
+				  <span><%=  elem.friendly_name %></span>
+				</div>
+				<div class="emne">
+				  <span>Emne</span>
+				</div>
+				<div class="tidStart">
+				  <span><%= elem.time %></span>
+				</div>
+				<div class="lokaleNummer">
+				  <span><%= elem.classroom %></span>
+				</div>
+				<div class="tid">
+				  <span>Tid</span>
+				</div>
+				<div class="lokale">
+				  <span>Lokale</span>
+				</div>
+			  </div>
+		
+			  <% }) %>
+			</div>
+			<img id="logo" src="/assets/img/logo1.png" alt="logo">
+		  </ul>
+	<div id="Group_311">
+		<div id="Group_283">
+			<svg class="Polygon_1" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_1" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_5" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_5" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_2" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_2" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_6" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_6" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_3" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_3" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_7" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_7" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_4" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_4" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_8" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_8" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_9" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_9" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_36" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_36" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_10" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_10" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_11" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_11" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_35" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_35" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_12" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_12" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_13" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_13" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_14" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_14" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_33" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_33" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_15" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_15" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_16" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_16" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_34" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_34" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_17" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_17" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_26" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_26" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_30" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_30" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_18" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_18" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_19" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_19" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_25" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_25" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_29" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_29" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_20" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_20" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_21" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_21" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_28" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_28" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_32" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_32" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_22" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_22" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_23" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_23" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_27" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_27" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_31" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_31" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_24" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_24" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+		</div>
+		<div id="Group_284">
+			<svg class="Polygon_1_b" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_1_b" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_75" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_75" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_77" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_77" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_79" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_79" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_81" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_81" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_5_b" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_5_b" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_2_b" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_2_b" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_76" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_76" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_78" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_78" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_80" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_80" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_6_cd" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_6_cd" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_3_ce" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_3_ce" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_7_cf" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_7_cf" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_4_cg" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_4_cg" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_8_ch" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_8_ch" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_9_ci" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_9_ci" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_36_cj" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_36_cj" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_68" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_68" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_70" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_70" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_72" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_72" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_10_cn" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_10_cn" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_11_co" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_11_co" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_35_cp" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_35_cp" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_69" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_69" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_71" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_71" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_12_cs" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_12_cs" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_13_ct" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_13_ct" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_14_cu" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_14_cu" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_33_cv" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_33_cv" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_15_cw" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_15_cw" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_16_cx" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_16_cx" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_34_cy" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_34_cy" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_17_cz" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_17_cz" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_26_c" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_26_c" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_73" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_73" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_30_c" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_30_c" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_18_c" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_18_c" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_19_c" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_19_c" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_25_c" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_25_c" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_74" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_74" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_29_c" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_29_c" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_20_c" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_20_c" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_21_c" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_21_c" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_28_da" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_28_da" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_32_db" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_32_db" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_22_dc" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_22_dc" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_23_dd" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_23_dd" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_27_de" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_27_de" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_31_df" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_31_df" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_24_dg" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_24_dg" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+		</div>
+		<div id="Group_293">
+			<svg class="Polygon_1_di" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_1_di" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_75_dj" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_75_dj" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_77_dk" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_77_dk" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_79_dl" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_79_dl" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_81_dm" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_81_dm" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_5_dn" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_5_dn" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_2_do" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_2_do" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_76_dp" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_76_dp" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_78_dq" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_78_dq" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_80_dr" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_80_dr" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_6_ds" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_6_ds" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_3_dt" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_3_dt" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_7_du" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_7_du" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_83" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_83" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_85" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_85" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_90" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_90" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_4_dy" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_4_dy" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_8_dz" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_8_dz" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_82" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_82" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_84" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_84" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_86" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_86" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_9_d" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_9_d" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_36_d" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_36_d" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_68_d" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_68_d" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_70_d" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_70_d" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_72_d" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_72_d" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_10_d" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_10_d" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_11_d" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_11_d" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_35_ea" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_35_ea" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_69_eb" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_69_eb" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_71_ec" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_71_ec" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_12_ed" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_12_ed" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_13_ee" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_13_ee" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_14_ef" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_14_ef" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_33_eg" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_33_eg" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_88" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_88" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_91" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_91" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_15_ej" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_15_ej" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_16_ek" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_16_ek" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_34_el" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_34_el" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_87" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_87" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_89" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_89" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_17_eo" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_17_eo" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_26_ep" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_26_ep" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_73_eq" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_73_eq" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_30_er" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_30_er" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_18_es" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_18_es" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_19_et" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_19_et" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_25_eu" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_25_eu" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_74_ev" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_74_ev" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_29_ew" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_29_ew" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_20_ex" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_20_ex" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_21_ey" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_21_ey" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_28_ez" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_28_ez" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_32_e" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_32_e" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_22_e" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_22_e" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_23_e" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_23_e" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_27_e" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_27_e" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_31_e" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_31_e" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_92" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_92" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_24_e" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_24_e" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+		</div>
+		<div id="Group_294">
+			<svg class="Polygon_1_e" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_1_e" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_75_e" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_75_e" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_77_fa" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_77_fa" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_79_fb" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_79_fb" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_81_fc" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_81_fc" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_5_fd" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_5_fd" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_2_fe" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_2_fe" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_76_ff" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_76_ff" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_78_fg" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_78_fg" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_80_fh" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_80_fh" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_6_fi" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_6_fi" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_3_fj" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_3_fj" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_7_fk" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_7_fk" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_83_fl" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_83_fl" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_85_fm" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_85_fm" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_90_fn" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_90_fn" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_4_fo" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_4_fo" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_8_fp" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_8_fp" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_82_fq" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_82_fq" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_84_fr" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_84_fr" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_86_fs" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_86_fs" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_9_ft" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_9_ft" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_36_fu" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_36_fu" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_68_fv" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_68_fv" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_70_fw" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_70_fw" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_72_fx" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_72_fx" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_10_fy" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_10_fy" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_11_fz" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_11_fz" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_35_f" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_35_f" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_69_f" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_69_f" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_71_f" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_71_f" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_12_f" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_12_f" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_13_f" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_13_f" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_14_f" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_14_f" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_33_f" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_33_f" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_88_f" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_88_f" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_91_f" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_91_f" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_15_f" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_15_f" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_16_ga" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_16_ga" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_34_gb" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_34_gb" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_87_gc" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_87_gc" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_89_gd" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_89_gd" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_17_ge" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_17_ge" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_26_gf" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_26_gf" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_73_gg" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_73_gg" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_30_gh" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_30_gh" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_18_gi" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_18_gi" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_19_gj" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_19_gj" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_25_gk" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_25_gk" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_74_gl" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_74_gl" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_29_gm" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_29_gm" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_20_gn" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_20_gn" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_21_go" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_21_go" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_28_gp" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_28_gp" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_32_gq" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_32_gq" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_22_gr" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_22_gr" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_23_gs" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_23_gs" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_27_gt" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_27_gt" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_31_gu" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_31_gu" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_92_gv" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_92_gv" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+			<svg class="Polygon_24_gw" viewBox="0 0 214.406 184.833">
+				<path fill="rgba(0,0,0,1)" stroke="rgba(255,255,255,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_24_gw" d="M 107.2030410766602 0 L 214.4060974121094 184.8328399658203 L 0 184.8328399658203 Z">
+				</path>
+			</svg>
+		</div>
+	</div>
+
+	<div id="Group_291">
+		<svg class="Rectangle_1495">
+			<rect fill="rgba(255,255,255,1)" id="Rectangle_1495" rx="4" ry="4" x="0" y="0" width="792" height="468">
+            <div class="etage">
+                <h3>OVERETAGEN N-GANGEN</h3>
+                <p>N214 - N237a</p>
+                <img style="padding-left:2em" width="95%" src="../../assets/img/overetage.svg" alt="overetage">
+            </div>
+            <div class="etage">
+                <h3>UNDERETAGEN N-GANGEN</h3>
+                <p>N112 - N122</p>
+                <img src="../../assets/img/underetage.svg" alt="underetage">
+            </div>
+            </rect>
+		</svg>
+		<div id="OVERETAGEN_N_GANGEN">
+			<span>OVERETAGEN N-GANGEN</span>
+		</div>
+		<div id="Logo_my">
+			<span>OVERETAGEN N-GANGEN</span>
+		</div>
+		<div id="N200___N228">
+			<span>N200 - N228</span>
+		</div>
+	</div>
+	<div id="Group_290">
+		<div id="Group_274">
+			<svg class="Rectangle_1477">
+				<rect fill="rgba(67,66,93,1)" id="Rectangle_1477" rx="4" ry="4" x="0" y="0" width="621" height="257">
+				</rect>
+			</svg>
+			<div id="Group_275">
+				
+				<div class="daydate" id="Mandag_3__Februar_2020">
+					<span></span>
+                </div>
+                <div id="ID08_15">
+					<span id="time"></span>
+				</div>
+			</div>
+			<div id="ID8C_">
+				<span><%= weatherData.CurrentData.temperature %></span><span>C°</span>
+			</div>
+		</div>
+		<div id="Let_regn">
+			<span><%= weatherData.CurrentData.skyText %></span>
+		</div>
+	</div>
+	<div id="Group_272">
+		<svg class="Rectangle_1477_bd">
+			<rect fill="rgba(67,66,93,1)" id="Rectangle_1477_bd" rx="4" ry="4" x="0" y="0" width="800" height="226">
+			</rect>
+		</svg>
+		<div id="Lorem_ipsum_dolor_sit_amet__co">
+			<span><%- news[0].content %></span>
+		</div>
+		<div id="Ny_kantine_p__Medie">
+			<span><%- news[0].title %></span>
+		</div>
+		<div id="ID27__Januar_2019">
+			<span><%- news[0].date_start.split(' ')[0] %></span>
+		</div>
+	</div>
+	<div id="Group_268">
+		<svg class="Rectangle_1477_bi">
+			<rect fill="rgba(67,66,93,1)" id="Rectangle_1477_bi" rx="4" ry="4" x="0" y="0" width="800" height="226">
+                <div id="Lorem_ipsum_dolor_sit_amet__co_bj">
+                <span><%- news[1].content %></span>
+                </div>
+                <div id="Mediehus_Projekt_i_Marts">
+                    <span><%- news[1].title %></span>
+                </div>
+                <div id="ID27__Januar_2019_nh">
+                    <span><%- news[1].date_start.split(' ')[0] %></span>
+                </div>
+            </rect>
+		</svg>
+		
+	</div>
+	<svg class="Rectangle_1505">
+		<rect fill="rgba(255,255,255,1)" id="Rectangle_1505" rx="0" ry="0" x="0" y="0" width="1920" height="50">
+        
+        </rect>
+    </svg>
+    <div class="nyhedWrapper">
+        <%/* tager all nyheder fra rss ud i sapn */%>
+        <% feed.items.forEach(item => {%>
+        <span class="nyhed"><%= item.title %></span>
+        <%});%>
+    </div>
+	<svg class="Rectangle_1491">
+		<rect fill="rgba(67,66,93,1)" id="Rectangle_1491" rx="4" ry="4" x="0" y="0" width="621" height="226">
+		</rect>
+	</svg>
+	<svg class="Rectangle_1507">
+		<rect fill="rgba(67,66,93,1)" id="Rectangle_1507" rx="4" ry="4" x="0" y="0" width="621" height="226">
+		</rect>
+	</svg>
+	<div id="Group_281">
+		<div id="bus">
+			<div id="Group_278">
+				<svg class="Path_404" viewBox="103.2 433 8.518 10.496">
+					<path fill="rgba(137,137,152,1)" id="Path_404" d="M 107.4591903686523 443.4959106445312 L 107.4591903686523 443.4959106445312 C 105.1014251708984 443.4959106445312 103.1999969482422 441.594482421875 103.1999969482422 439.2366943359375 L 103.1999969482422 433.0000610351562 L 111.7183685302734 433.0000610351562 L 111.7183685302734 439.2366943359375 C 111.7183685302734 441.594482421875 109.8017425537109 443.4959106445312 107.4591903686523 443.4959106445312 Z">
+					</path>
+				</svg>
+				<svg class="Path_405" viewBox="353.1 433 8.518 10.496">
+					<path fill="rgba(137,137,152,1)" id="Path_405" d="M 357.3592529296875 443.4959106445312 L 357.3592529296875 443.4959106445312 C 355.0014038085938 443.4959106445312 353.1000366210938 441.594482421875 353.1000366210938 439.2366943359375 L 353.1000366210938 433.0000610351562 L 361.6184387207031 433.0000610351562 L 361.6184387207031 439.2366943359375 C 361.6184387207031 441.594482421875 359.7017211914062 443.4959106445312 357.3592529296875 443.4959106445312 Z">
+					</path>
+				</svg>
+				<svg class="Path_406" viewBox="462 104.9 6.085 11.774">
+					<path fill="rgba(137,137,152,1)" id="Path_406" d="M 465.0423583984375 116.6736297607422 L 465.0423583984375 116.6736297607422 C 463.3690795898438 116.6736297607422 462.0000610351562 115.3046112060547 462.0000610351562 113.63134765625 L 462.0000610351562 107.9422912597656 C 462.0000610351562 106.26904296875 463.3690795898438 104.900032043457 465.0423583984375 104.900032043457 L 465.0423583984375 104.900032043457 C 466.715576171875 104.900032043457 468.0846557617188 106.26904296875 468.0846557617188 107.9422912597656 L 468.0846557617188 113.63134765625 C 468.0846557617188 115.3046112060547 466.715576171875 116.6736297607422 465.0423583984375 116.6736297607422 Z">
+					</path>
+				</svg>
+				<svg class="Path_407" viewBox="10 104.9 6.085 11.774">
+					<path fill="rgba(137,137,152,1)" id="Path_407" d="M 13.04227447509766 116.6736297607422 L 13.04227447509766 116.6736297607422 C 14.71552658081055 116.6736297607422 16.08455276489258 115.3046112060547 16.08455276489258 113.63134765625 L 16.08455276489258 107.9422912597656 C 16.08455276489258 106.26904296875 14.71552658081055 104.900032043457 13.04227447509766 104.900032043457 L 13.04227447509766 104.900032043457 C 11.36902523040771 104.900032043457 10 106.26904296875 10 107.9422912597656 L 10 113.63134765625 C 10 115.3046112060547 11.36902523040771 116.6736297607422 13.04227447509766 116.6736297607422 Z">
+					</path>
+				</svg>
+			</div>
+			<svg class="Path_408" viewBox="74.1 10 55.354 64.344">
+				<path fill="rgba(255,0,0,1)" id="Path_408" d="M 123.3696517944336 10 L 80.18454742431641 10 C 76.82283020019531 10 74.09999084472656 12.72283744812012 74.09999084472656 16.08455276489258 L 74.09999084472656 68.25958251953125 C 74.09999084472656 71.62130737304688 76.82283020019531 74.34415435791016 80.18454742431641 74.34415435791016 L 123.3696517944336 74.34415435791016 C 126.7313690185547 74.34415435791016 129.4542083740234 71.62130737304688 129.4542083740234 68.25958251953125 L 129.4542083740234 16.08455276489258 C 129.4542083740234 12.72283744812012 126.7313690185547 10 123.3696517944336 10 Z">
+				</path>
+			</svg>
+			<svg class="Path_409" viewBox="74 90 55.369 32.978">
+				<path fill="rgba(201,243,255,1)" id="Path_409" d="M 129.3694305419922 116.5134429931641 L 122.9198150634766 122.9782867431641 L 80.44964599609375 122.9782867431641 L 74 116.5134429931641 L 74 89.99999237060547 L 129.3694305419922 89.99999237060547 L 129.3694305419922 116.5134429931641 Z">
+				</path>
+			</svg>
+			<div id="Group_279">
+				<svg class="Ellipse_50">
+					<ellipse fill="rgba(255,255,255,1)" id="Ellipse_50" rx="3.0422751903533936" ry="3.0422751903533936" cx="3.0422751903533936" cy="3.0422751903533936">
+					</ellipse>
+				</svg>
+				<svg class="Ellipse_51">
+					<ellipse fill="rgba(255,255,255,1)" id="Ellipse_51" rx="3.0422751903533936" ry="3.0422751903533936" cx="3.0422751903533936" cy="3.0422751903533936">
+					</ellipse>
+				</svg>
+			</div>
+			<svg class="Rectangle_1487">
+				<rect fill="rgba(255,198,108,1)" id="Rectangle_1487" rx="0" ry="0" x="0" y="0" width="15.82" height="6.085">
+				</rect>
+			</svg>
+			<svg class="Rectangle_1488">
+				<rect fill="rgba(255,255,255,1)" id="Rectangle_1488" rx="0" ry="0" x="0" y="0" width="21" height="7">
+				</rect>
+			</svg>
+			<svg class="Path_410" viewBox="247.6 0 3.042 3.042">
+				<path fill="rgba(0,0,0,1)" id="Path_410" d="M 249.1211242675781 3.042275905609131 C 249.5166625976562 3.042275905609131 249.9121398925781 2.874950885772705 250.2011413574219 2.60114598274231 C 250.4901428222656 2.312130212783813 250.6423034667969 1.931845426559448 250.6423034667969 1.521137952804565 C 250.6423034667969 1.110430598258972 250.4749755859375 0.7301462888717651 250.2011413574219 0.4411301016807556 C 249.9273681640625 0.1521138697862625 249.5166625976562 5.654897350382271e-08 249.1211242675781 5.654897350382271e-08 C 248.7256469726562 5.654897350382271e-08 248.3301696777344 0.1673252433538437 248.0411376953125 0.4411301016807556 C 247.7521362304688 0.7149349451065063 247.6000061035156 1.110430717468262 247.6000061035156 1.521137952804565 C 247.6000061035156 1.931845188140869 247.767333984375 2.312129974365234 248.0411376953125 2.60114598274231 C 248.3301696777344 2.874950885772705 248.71044921875 3.042275905609131 249.1211242675781 3.042275905609131 Z">
+				</path>
+			</svg>
+			<svg class="Path_411" viewBox="0 0 77.867 77.882">
+				<path fill="rgba(0,0,0,1)" id="Path_411" d="M 74.83998870849609 14.69419384002686 L 74.83998870849609 10.41979598999023 C 74.83998870849609 8.107665061950684 72.968994140625 6.236665725708008 70.6568603515625 6.236665725708008 L 68.01008605957031 6.236665725708008 C 67.37120056152344 2.692414522171021 64.26808929443359 0 60.54129791259766 0 L 45.69498825073242 0 C 44.85836029052734 0 44.17385101318359 0.6845120787620544 44.17385101318359 1.521137952804565 C 44.17385101318359 2.357763767242432 44.85836029052734 3.042275905609131 45.69498825073242 3.042275905609131 L 60.54129791259766 3.042275905609131 C 63.05117416381836 3.042275905609131 65.10469818115234 5.095812797546387 65.10469818115234 7.605690479278564 L 65.10469818115234 12.16910362243652 L 50.50178909301758 12.16910362243652 L 50.50178909301758 7.605690479278564 C 50.50178909301758 6.769063949584961 49.81726455688477 6.084551811218262 48.98064422607422 6.084551811218262 L 28.9016227722168 6.084551811218262 C 28.06499481201172 6.084551811218262 27.38048553466797 6.769063949584961 27.38048553466797 7.605690479278564 L 27.38048553466797 12.16910362243652 L 12.79276943206787 12.16910362243652 L 12.79276943206787 7.605690479278564 C 12.79276943206787 5.095812797546387 14.84630489349365 3.042275905609131 17.35618782043457 3.042275905609131 L 32.6284065246582 3.042275905609131 C 33.46503829956055 3.042275905609131 34.1495475769043 2.357763767242432 34.1495475769043 1.521137952804565 C 34.1495475769043 0.6845120787620544 33.46503829956055 0 32.6284065246582 0 L 17.35618782043457 0 C 13.62939739227295 0 10.52627277374268 2.692414522171021 9.887397766113281 6.236665725708008 L 7.225405693054199 6.236665725708008 C 4.913276195526123 6.236665725708008 3.042275905609131 8.107665061950684 3.042275905609131 10.41979598999023 L 3.042275905609131 14.70940494537354 C 1.277755856513977 15.33307075500488 0 17.02153396606445 0 19.01422500610352 L 0 24.70328140258789 C 0 27.21315956115723 2.053536653518677 29.26669692993164 4.563413619995117 29.26669692993164 C 7.073291301727295 29.26669692993164 9.126827239990234 27.21315956115723 9.126827239990234 24.70328140258789 L 9.126827239990234 19.01422309875488 C 9.126827239990234 17.0367431640625 7.849071979522705 15.33306980133057 6.084551811218262 14.70940494537354 L 6.084551811218262 10.41979598999023 C 6.084551811218262 9.796128273010254 6.601739406585693 9.278942108154297 7.225405693054199 9.278942108154297 L 9.750494003295898 9.278942108154297 L 9.750494003295898 59.78071975708008 C 9.750494003295898 62.83821487426758 11.56064796447754 65.46977996826172 14.16179370880127 66.68669128417969 L 14.16179370880127 72.10194396972656 C 14.16179370880127 75.29634094238281 16.74773025512695 77.88227081298828 19.9421215057373 77.88227081298828 C 23.13651084899902 77.88227081298828 25.72244453430176 75.29634094238281 25.72244453430176 72.10194396972656 L 25.72244453430176 67.38641357421875 L 52.17502593994141 67.38641357421875 L 52.17502593994141 72.10194396972656 C 52.17502593994141 75.29634094238281 54.76097106933594 77.88227081298828 57.95536041259766 77.88227081298828 C 61.14974975585938 77.88227081298828 63.73568344116211 75.29634094238281 63.73568344116211 72.10194396972656 L 63.73568344116211 66.67147827148438 C 66.32161712646484 65.45456695556641 68.13176727294922 62.82299423217773 68.13176727294922 59.78071975708008 L 68.13176727294922 9.278942108154297 L 70.64164733886719 9.278942108154297 C 71.26532745361328 9.278942108154297 71.78250122070312 9.796128273010254 71.78250122070312 10.41979598999023 L 71.78250122070312 14.70940494537354 C 70.01797485351562 15.33307075500488 68.74022674560547 17.02153396606445 68.74022674560547 19.01422500610352 L 68.74022674560547 24.70328140258789 C 68.74022674560547 27.21315956115723 70.79376983642578 29.26669692993164 73.30364227294922 29.26669692993164 C 75.81351470947266 29.26669692993164 77.86705017089844 27.21315956115723 77.86705017089844 24.70328140258789 L 77.86705017089844 19.01422309875488 C 77.88227081298828 17.02153587341309 76.60452270507812 15.33307075500488 74.83998870849609 14.69419384002686 Z M 6.084551811218262 24.68806838989258 C 6.084551811218262 25.52469825744629 5.400040149688721 26.20920562744141 4.563413619995117 26.20920562744141 C 3.726788520812988 26.20920562744141 3.042275905609131 25.52469825744629 3.042275905609131 24.68806838989258 L 3.042275905609131 18.99901390075684 C 3.042275905609131 18.16238784790039 3.726788520812988 17.47787666320801 4.563413619995117 17.47787666320801 C 5.400040149688721 17.47787666320801 6.084551811218262 18.16238784790039 6.084551811218262 18.99901390075684 L 6.084551811218262 24.68806838989258 Z M 30.92473411560059 35.6859016418457 C 30.33149337768555 35.09265899658203 29.3731746673584 35.09265899658203 28.77993202209473 35.6859016418457 L 19.31845283508301 45.14737701416016 L 18.34492492675781 45.14737701416016 L 13.64460849761963 40.44705581665039 L 37.41999435424805 16.65646171569824 L 37.41999435424805 45.14737701416016 L 23.6232738494873 45.14737701416016 L 30.92473411560059 37.84591674804688 C 31.51797866821289 37.23745346069336 31.51797866821289 36.27914428710938 30.92473411560059 35.6859016418457 Z M 49.68036651611328 15.21138095855713 L 44.93441390991211 19.95733261108398 C 44.34118270874023 20.55057334899902 44.34118270874023 21.50889015197754 44.93441390991211 22.10213470458984 C 45.2386360168457 22.40636444091797 45.61893081665039 22.54326248168945 46.01442337036133 22.54326248168945 C 46.40992736816406 22.54326248168945 46.79020690917969 22.39115142822266 47.09443283081055 22.10213470458984 L 53.98519134521484 15.21138095855713 L 62.92948150634766 15.21138095855713 L 40.46227264404297 37.69380187988281 L 40.46227264404297 15.21138095855713 L 49.68036651611328 15.21138095855713 Z M 40.46227264404297 41.98340606689453 L 65.10469818115234 17.34097671508789 L 65.10469818115234 39.56480026245117 L 59.55255508422852 45.1169548034668 L 40.46227264404297 45.1169548034668 L 40.46227264404297 41.98340606689453 Z M 30.42276191711426 9.126827239990234 L 47.45951080322266 9.126827239990234 L 47.45951080322266 12.16910362243652 L 30.42276191711426 12.16910362243652 L 30.42276191711426 9.126827239990234 Z M 34.56025314331055 15.21138095855713 L 12.79276943206787 36.97886276245117 L 12.79276943206787 15.21138095855713 L 34.56025314331055 15.21138095855713 Z M 22.69538307189941 72.10194396972656 C 22.69538307189941 73.60787200927734 21.4632568359375 74.83998870849609 19.95733261108398 74.83998870849609 C 18.45140266418457 74.83998870849609 17.21928024291992 73.60787200927734 17.21928024291992 72.10194396972656 L 17.21928024291992 67.38641357421875 L 17.37139701843262 67.38641357421875 L 22.69538307189941 67.38641357421875 L 22.69538307189941 72.10194396972656 Z M 60.7086181640625 67.38641357421875 L 60.7086181640625 72.10194396972656 C 60.7086181640625 73.60787200927734 59.47650146484375 74.83998870849609 57.97056579589844 74.83998870849609 C 56.46464538574219 74.83998870849609 55.23252487182617 73.60787200927734 55.23252487182617 72.10194396972656 L 55.23252487182617 67.38641357421875 L 60.54129791259766 67.38641357421875 L 60.7086181640625 67.38641357421875 Z M 60.54129791259766 64.34413146972656 L 17.35618782043457 64.34413146972656 C 14.84630489349365 64.34413146972656 12.79276943206787 62.29060363769531 12.79276943206787 59.78071975708008 L 12.79276943206787 43.90004348754883 L 16.62603759765625 47.73330688476562 C 16.91505432128906 48.02233123779297 17.29533767700195 48.17444229125977 17.7060489654541 48.17444229125977 L 60.16100692749023 48.17444229125977 C 60.57172012329102 48.17444229125977 60.95199966430664 48.00711441040039 61.24101638793945 47.73330688476562 L 65.08950042724609 43.88483047485352 L 65.08950042724609 59.78071975708008 C 65.10469818115234 62.29060363769531 63.05117416381836 64.34413146972656 60.54129791259766 64.34413146972656 Z M 74.83998870849609 24.68806838989258 C 74.83998870849609 25.52469825744629 74.15547943115234 26.20920562744141 73.31885528564453 26.20920562744141 C 72.48223114013672 26.20920562744141 71.79771423339844 25.52469825744629 71.79771423339844 24.68806838989258 L 71.79771423339844 18.99901390075684 C 71.79771423339844 18.16238784790039 72.48223114013672 17.47787666320801 73.31885528564453 17.47787666320801 C 74.15547943115234 17.47787666320801 74.83998870849609 18.16238784790039 74.83998870849609 18.99901390075684 L 74.83998870849609 24.68806838989258 Z">
+				</path>
+			</svg>
+			<svg class="Path_412" viewBox="110 339.9 9.127 9.127">
+				<path fill="rgba(0,0,0,1)" id="Path_412" d="M 114.5634002685547 339.9000854492188 C 112.0535430908203 339.9000854492188 110 341.95361328125 110 344.4634399414062 C 110 346.9733276367188 112.0535430908203 349.0268859863281 114.5634002685547 349.0268859863281 C 117.0732879638672 349.0268859863281 119.1268157958984 346.9733276367188 119.1268157958984 344.4634399414062 C 119.1268157958984 341.95361328125 117.0885162353516 339.9000854492188 114.5634002685547 339.9000854492188 Z M 114.5634002685547 345.984619140625 C 113.7267913818359 345.984619140625 113.0422821044922 345.3000793457031 113.0422821044922 344.4634399414062 C 113.0422821044922 343.6268920898438 113.7267913818359 342.9423217773438 114.5634002685547 342.9423217773438 C 115.4000396728516 342.9423217773438 116.0845642089844 343.6268920898438 116.0845642089844 344.4634399414062 C 116.0845642089844 345.3000793457031 115.4152526855469 345.984619140625 114.5634002685547 345.984619140625 Z">
+				</path>
+			</svg>
+			<svg class="Path_413" viewBox="342 339.9 9.127 9.127">
+				<path fill="rgba(0,0,0,1)" id="Path_413" d="M 346.5634460449219 339.9000854492188 C 344.0535583496094 339.9000854492188 342.0000610351562 341.95361328125 342.0000610351562 344.4634399414062 C 342.0000610351562 346.9733276367188 344.0535583496094 349.0268859863281 346.5634460449219 349.0268859863281 C 349.0733337402344 349.0268859863281 351.1268310546875 346.9733276367188 351.1268310546875 344.4634399414062 C 351.1268310546875 341.95361328125 349.0733337402344 339.9000854492188 346.5634460449219 339.9000854492188 Z M 346.5634460449219 345.984619140625 C 345.726806640625 345.984619140625 345.0423278808594 345.3000793457031 345.0423278808594 344.4634399414062 C 345.0423278808594 343.6268920898438 345.726806640625 342.9423217773438 346.5634460449219 342.9423217773438 C 347.4000244140625 342.9423217773438 348.0845947265625 343.6268920898438 348.0845947265625 344.4634399414062 C 348.0845947265625 345.3000793457031 347.4000244140625 345.984619140625 346.5634460449219 345.984619140625 Z">
+				</path>
+			</svg>
+			<svg class="Path_414" viewBox="194.1 339.9 18.862 9.127">
+				<path fill="rgba(0,0,0,1)" id="Path_414" d="M 211.4410400390625 339.9000854492188 L 195.6212005615234 339.9000854492188 C 194.7845611572266 339.9000854492188 194.1000518798828 340.5845336914062 194.1000518798828 341.4212036132812 L 194.1000518798828 347.5057678222656 C 194.1000518798828 348.3423461914062 194.7845611572266 349.0268859863281 195.6212005615234 349.0268859863281 L 211.4410400390625 349.0268859863281 C 212.2776489257812 349.0268859863281 212.962158203125 348.3423461914062 212.962158203125 347.5057678222656 L 212.962158203125 341.4212036132812 C 212.962158203125 340.5845336914062 212.2776489257812 339.9000854492188 211.4410400390625 339.9000854492188 Z M 209.9198608398438 345.984619140625 L 197.142333984375 345.984619140625 L 197.142333984375 342.9423217773438 L 209.9198608398438 342.9423217773438 L 209.9198608398438 345.984619140625 Z">
+				</path>
+			</svg>
+		</div>
+		<div id="Bus_18_">
+			<span>Bus 18 </span>
+		</div>
+		<div id="Bus_17">
+			<span>Bus 17</span>
+		</div>
+		<div id="Mod_Aalborg_busterminal_">
+			<span>Mod Aalborg busterminal </span>
+		</div>
+		<div id="bus_gul">
+			<svg class="Path_415" viewBox="103.17 433 8.456 10.419">
+				<path fill="rgba(137,137,152,1)" id="Path_415" d="M 107.3980407714844 443.4190673828125 L 107.3980407714844 443.4190673828125 C 105.0629501342773 443.4190673828125 103.1699981689453 441.526123046875 103.1699981689453 439.1910400390625 L 103.1699981689453 433 L 111.6260757446289 433 L 111.6260757446289 439.1910400390625 C 111.6260757446289 441.526123046875 109.7331161499023 443.4190673828125 107.3980407714844 443.4190673828125 Z">
+				</path>
+			</svg>
+			<svg class="Path_416" viewBox="353.09 433 8.456 10.419">
+				<path fill="rgba(137,137,152,1)" id="Path_416" d="M 357.3180236816406 443.4190673828125 L 357.3180236816406 443.4190673828125 C 354.9829406738281 443.4190673828125 353.0899963378906 441.526123046875 353.0899963378906 439.1910400390625 L 353.0899963378906 433 L 361.5460815429688 433 L 361.5460815429688 439.1910400390625 C 361.5460815429688 441.526123046875 359.6531066894531 443.4190673828125 357.3180236816406 443.4190673828125 Z">
+				</path>
+			</svg>
+			<svg class="Path_417" viewBox="462 104.92 6.04 11.683">
+				<path fill="rgba(137,137,152,1)" id="Path_417" d="M 465.02001953125 116.6029663085938 L 465.02001953125 116.6029663085938 C 463.3521118164062 116.6029663085938 462 115.250862121582 462 113.5829467773438 L 462 107.9400253295898 C 462 106.2721176147461 463.3521118164062 104.9199981689453 465.02001953125 104.9199981689453 L 465.02001953125 104.9199981689453 C 466.6879272460938 104.9199981689453 468.0400390625 106.2721176147461 468.0400390625 107.9400253295898 L 468.0400390625 113.5829467773438 C 468.0400390625 115.250862121582 466.6879272460938 116.6029663085938 465.02001953125 116.6029663085938 Z">
+				</path>
+			</svg>
+			<svg class="Path_418" viewBox="10 104.92 6.04 11.683">
+				<path fill="rgba(137,137,152,1)" id="Path_418" d="M 13.0200252532959 116.6029663085938 L 13.0200252532959 116.6029663085938 C 14.68793964385986 116.6029663085938 16.04005241394043 115.250862121582 16.04005241394043 113.5829467773438 L 16.04005241394043 107.9400253295898 C 16.04005241394043 106.2721176147461 14.68793869018555 104.9199981689453 13.0200252532959 104.9199981689453 L 13.0200252532959 104.9199981689453 C 11.35210990905762 104.9199981689453 9.999998092651367 106.2721176147461 9.999998092651367 107.9400253295898 L 9.999998092651367 113.5829467773438 C 9.999998092651367 115.250862121582 11.35210990905762 116.6029663085938 13.02002334594727 116.6029663085938 Z">
+				</path>
+			</svg>
+			<svg class="Path_419" viewBox="74.13 10 54.945 63.874">
+				<path fill="rgba(255,255,0,1)" id="Path_419" d="M 123.0348129272461 10 L 80.17005920410156 10 C 76.83422088623047 10 74.12999725341797 12.70422458648682 74.12999725341797 16.04005432128906 L 74.12999725341797 67.83351898193359 C 74.12999725341797 71.16934204101562 76.83422088623047 73.87357330322266 80.17005920410156 73.87357330322266 L 123.0348129272461 73.87357330322266 C 126.3706283569336 73.87357330322266 129.0748443603516 71.16934204101562 129.0748443603516 67.83351898193359 L 129.0748443603516 16.04005241394043 C 129.0748443603516 12.70422458648682 126.3706283569336 10 123.0348129272461 10 Z">
+				</path>
+			</svg>
+			<svg class="Path_420" viewBox="74 90 54.964 32.731">
+				<path fill="rgba(201,243,255,1)" id="Path_420" d="M 128.9644927978516 116.3240661621094 L 122.5574951171875 122.7310485839844 L 80.40699005126953 122.7310485839844 L 74 116.3240661621094 L 74 90 L 128.9584655761719 90 L 128.9644927978516 116.3240661621094 Z">
+				</path>
+			</svg>
+			<svg class="Ellipse_52">
+				<ellipse fill="rgba(255,255,255,1)" id="Ellipse_52" rx="3.020026683807373" ry="3.020026683807373" cx="3.020026683807373" cy="3.020026683807373">
+				</ellipse>
+			</svg>
+			<svg class="Ellipse_53">
+				<ellipse fill="rgba(255,255,255,1)" id="Ellipse_53" rx="3.020026683807373" ry="3.020026683807373" cx="3.020026683807373" cy="3.020026683807373">
+				</ellipse>
+			</svg>
+			<svg class="Rectangle_1489">
+				<rect fill="rgba(255,198,108,1)" id="Rectangle_1489" rx="0" ry="0" x="0" y="0" width="15.704" height="6.04">
+				</rect>
+			</svg>
+			<svg class="Rectangle_1490">
+				<rect fill="rgba(255,255,255,1)" id="Rectangle_1490" rx="0" ry="0" x="0" y="0" width="20" height="7">
+				</rect>
+			</svg>
+			<svg class="Path_421" viewBox="247.58 -0.003 3.02 3.021">
+				<path fill="rgba(0,0,0,1)" id="Path_421" d="M 249.0898132324219 3.017209768295288 C 249.9237670898438 3.017209768295288 250.5998229980469 2.341153860092163 250.5998229980469 1.50719678401947 C 250.5998229980469 0.8233668208122253 250.1407165527344 0.2250923663377762 249.48046875 0.04826726764440536 C 248.820556640625 -0.1286154091358185 248.1238098144531 0.1599609851837158 247.7820739746094 0.75190669298172 C 247.4403381347656 1.343852400779724 247.5388488769531 2.091534852981567 248.022216796875 2.574776172637939 C 248.3060913085938 2.856863498687744 248.6896057128906 3.015810251235962 249.0898132324219 3.017210006713867 Z">
+				</path>
+			</svg>
+			<svg class="Path_422" viewBox="0 0 77.313 77.313">
+				<path fill="rgba(0,0,0,1)" id="Path_422" d="M 74.29265594482422 14.59276962280273 L 74.29265594482422 10.34208202362061 C 74.28849792480469 8.050077438354492 72.43061065673828 6.193545818328857 70.13860321044922 6.191053867340088 L 67.51723480224609 6.191055297851562 C 66.85768890380859 2.610236167907715 63.73957824707031 0.008116759359836578 60.09852981567383 0 L 45.3502311706543 0 C 44.51627349853516 0 43.84021759033203 0.6760560870170593 43.84021759033203 1.510013341903687 C 43.84021759033203 2.343970775604248 44.51627349853516 3.020026683807373 45.3502311706543 3.020026683807373 L 60.09852981567383 3.020026683807373 C 62.60041046142578 3.02002739906311 64.62857818603516 5.048195362091064 64.62857818603516 7.550066947937012 L 64.62857818603516 12.08010673522949 L 50.13244247436523 12.08010673522949 L 50.13244247436523 7.550066947937012 C 50.13244247436523 6.716109752655029 49.45639038085938 6.040053367614746 48.62243270874023 6.040053367614746 L 28.69025421142578 6.040053367614746 C 27.85629844665527 6.040053367614746 27.18024063110352 6.716109752655029 27.18024063110352 7.550066947937012 L 27.18024063110352 12.08010673522949 L 12.70374202728271 12.08010673522949 L 12.70374202728271 7.550066947937012 C 12.70374298095703 5.048195362091064 14.73191165924072 3.020026683807373 17.23378372192383 3.02002739906311 L 32.38978576660156 3.020026683807373 C 33.2237434387207 3.020026683807373 33.89979934692383 2.343970775604248 33.89979934692383 1.510013341903687 C 33.89979934692383 0.6760560274124146 33.2237434387207 0 32.38978576660156 0 L 17.2337818145752 0 C 13.59274291992188 0.008123096078634262 10.47464466094971 2.610241889953613 9.815089225769043 6.191055297851562 L 7.174073696136475 6.191055297851562 C 4.882068157196045 6.193547248840332 3.024186849594116 8.050078392028809 3.020026683807373 10.34208106994629 L 3.020026683807373 14.59276962280273 C 1.210289120674133 15.23260879516602 0.0002738996117841452 16.94357299804688 0 18.86308670043945 L 0 24.50600814819336 C 0 27.00787734985352 2.028168201446533 29.03604698181152 4.530040264129639 29.03604698181152 C 7.031912803649902 29.03604698181152 9.060080528259277 27.00787734985352 9.060080528259277 24.50600814819336 L 9.060080528259277 18.86308670043945 C 9.057549476623535 16.94428825378418 7.848361015319824 15.2344970703125 6.040052890777588 14.59277057647705 L 6.040053367614746 10.34208202362061 C 6.042546272277832 9.717303276062012 6.54929256439209 9.211907386779785 7.174074649810791 9.211080551147461 L 9.683714866638184 9.211081504821777 L 9.683714866638184 59.34352874755859 C 9.685746192932129 62.28514862060547 11.39410591125488 64.95844268798828 14.0627555847168 66.19596862792969 L 14.0627555847168 71.57463836669922 C 14.0627555847168 74.74367523193359 16.63176918029785 77.31268310546875 19.80080795288086 77.31268310546875 C 22.9698429107666 77.31268310546875 25.53885841369629 74.74367523193359 25.53885841369629 71.57463836669922 L 25.53885841369629 66.89359283447266 L 51.80704879760742 66.89359283447266 L 51.80704879760742 71.57463836669922 C 51.80705642700195 74.74367523193359 54.37606811523438 77.31268310546875 57.54510879516602 77.31268310546875 C 60.71413803100586 77.31268310546875 63.28315734863281 74.74367523193359 63.28315734863281 71.57463836669922 L 63.28314971923828 66.18388366699219 C 65.94254302978516 64.94423675537109 67.64434051513672 62.27764511108398 67.64859771728516 59.34352493286133 L 67.64859771728516 9.211081504821777 L 70.1446533203125 9.211081504821777 C 70.76706695556641 9.215214729309082 71.27015686035156 9.719649314880371 71.27262878417969 10.34208297729492 L 71.27262878417969 14.59276962280273 C 69.46432495117188 15.23449897766113 68.255126953125 16.94428825378418 68.25260925292969 18.86308670043945 L 68.25260925292969 24.50600814819336 C 68.25260925292969 27.00787734985352 70.28077697753906 29.03604698181152 72.78265380859375 29.03604698181152 C 75.28452301025391 29.03604698181152 77.31268310546875 27.00787734985352 77.31268310546875 24.50600814819336 L 77.31268310546875 18.86308670043945 C 77.31015014648438 16.94428825378418 76.10095977783203 15.2344970703125 74.29265594482422 14.59277057647705 Z M 6.040053367614746 24.50600814819336 C 6.040053367614746 25.33996391296387 5.363997459411621 26.01602172851562 4.530040264129639 26.01602172851562 C 3.696083068847656 26.01602172851562 3.020026683807373 25.33996391296387 3.020026683807373 24.50600814819336 L 3.020026683807373 18.86308670043945 C 3.020026683807373 18.02912902832031 3.696083068847656 17.35307502746582 4.530040264129639 17.35307502746582 C 5.363997459411621 17.35307502746582 6.040053367614746 18.02912902832031 6.040053367614746 18.86308670043945 L 6.040053367614746 24.50600814819336 Z M 30.69555282592773 35.4249153137207 C 30.10589218139648 34.83543395996094 29.15005111694336 34.83543395996094 28.56039237976074 35.4249153137207 L 19.17717170715332 44.81116104125977 L 18.20925140380859 44.81116104125977 L 13.5357608795166 40.14068222045898 L 37.14632797241211 16.53011703491211 L 37.14632797241211 44.81116104125977 L 23.44446754455566 44.81116104125977 L 30.69253158569336 37.56309509277344 C 30.9769401550293 37.28020858764648 31.13710021972656 36.89577865600586 31.13766479492188 36.49463272094727 C 31.13823127746582 36.0934944152832 30.97916030883789 35.7086067199707 30.69555282592773 35.42491912841797 Z M 49.32308197021484 15.10013389587402 L 44.61938858032227 19.80382347106934 C 44.02978134155273 20.39384841918945 44.03011703491211 21.35012817382812 44.62014007568359 21.93973731994629 C 45.21016311645508 22.52934455871582 46.16644668579102 22.52900886535645 46.75605773925781 21.9389820098877 L 53.59490203857422 15.10013389587402 L 62.47982025146484 15.10013389587402 L 40.16635513305664 37.41209411621094 L 40.16635513305664 15.10013389587402 L 49.32308197021484 15.10013389587402 Z M 40.16635513305664 41.68391418457031 L 64.62857818603516 17.22170066833496 L 64.62857818603516 39.29508209228516 L 59.11249542236328 44.81116104125977 L 40.16635513305664 44.81116104125977 L 40.16635513305664 41.68391418457031 Z M 30.20026779174805 9.060080528259277 L 47.11241912841797 9.060080528259277 L 47.11241912841797 12.08010673522949 L 30.20026779174805 12.08010673522949 L 30.20026779174805 9.060080528259277 Z M 34.30599212646484 15.10013389587402 L 12.70374202728271 36.70238494873047 L 12.70374202728271 15.10013389587402 L 34.30599212646484 15.10013389587402 Z M 22.52788925170898 71.57463836669922 C 22.52788925170898 73.07575225830078 21.31098937988281 74.29265594482422 19.80986595153809 74.29265594482422 C 18.30874252319336 74.29265594482422 17.09184265136719 73.07575225830078 17.09184265136719 71.57463836669922 L 17.09184265136719 66.89359283447266 L 22.52788925170898 66.89359283447266 L 22.52788925170898 71.57463836669922 Z M 60.26614761352539 66.89359283447266 L 60.26614761352539 71.57463836669922 C 60.26614761352539 73.07575225830078 59.04924011230469 74.29265594482422 57.54811859130859 74.29265594482422 C 56.0469970703125 74.29265594482422 54.8300895690918 73.07575225830078 54.8300895690918 71.57463836669922 L 54.8300895690918 66.89359283447266 L 60.26614761352539 66.89359283447266 Z M 60.09852981567383 63.87356567382812 L 17.2337818145752 63.87356567382812 C 14.73191165924072 63.87356567382812 12.70374298095703 61.84540176391602 12.70374298095703 59.34352874755859 L 12.70374202728271 43.57898712158203 L 16.51350784301758 47.38875198364258 C 16.79662132263184 47.67195510864258 17.18063926696777 47.83110427856445 17.58108520507812 47.83118438720703 L 59.73160552978516 47.83118438720703 C 60.13172912597656 47.83118438720703 60.51578521728516 47.67212295532227 60.79895782470703 47.38898086547852 L 64.62857818603516 43.56539535522461 L 64.62857818603516 59.34352874755859 C 64.62857818603516 61.84540176391602 62.60041046142578 63.87356567382812 60.09853744506836 63.87356567382812 Z M 74.29265594482422 24.50600814819336 C 74.29265594482422 25.33996772766113 73.61660766601562 26.01602554321289 72.78263854980469 26.01602554321289 C 71.94869232177734 26.01602554321289 71.27262878417969 25.33996772766113 71.27262878417969 24.50601005554199 L 71.27262878417969 18.86308670043945 C 71.27262878417969 18.02912902832031 71.94869232177734 17.35307502746582 72.78263854980469 17.35307502746582 C 73.61660766601562 17.35307502746582 74.29265594482422 18.02912902832031 74.29265594482422 18.86308670043945 L 74.29265594482422 24.50600814819336 Z">
+				</path>
+			</svg>
+			<svg class="Path_423" viewBox="110 339.88 9.06 9.06">
+				<path fill="rgba(0,0,0,1)" id="Path_423" d="M 114.5300521850586 339.8800048828125 C 112.028190612793 339.8800048828125 110.0000152587891 341.9081726074219 110.0000152587891 344.4100646972656 C 110.0000152587891 346.9119262695312 112.028190612793 348.9401245117188 114.5300521850586 348.9401245117188 C 117.0319290161133 348.9401245117188 119.0600967407227 346.9119262695312 119.0600967407227 344.4100646972656 C 119.0600967407227 341.9081726074219 117.0319290161133 339.8800048828125 114.5300521850586 339.8800048828125 Z M 114.5300521850586 345.9200744628906 C 113.6961059570312 345.9200744628906 113.0200424194336 345.2440185546875 113.0200424194336 344.4100646972656 C 113.0200424194336 343.5760803222656 113.6961059570312 342.9000549316406 114.5300521850586 342.9000549316406 C 115.3640213012695 342.9000549316406 116.0400695800781 343.5760803222656 116.0400695800781 344.4100646972656 C 116.0400695800781 345.2440185546875 115.3640213012695 345.9200744628906 114.5300521850586 345.9200744628906 Z">
+				</path>
+			</svg>
+			<svg class="Path_424" viewBox="342 339.88 9.06 9.06">
+				<path fill="rgba(0,0,0,1)" id="Path_424" d="M 346.5300598144531 339.8800048828125 C 344.0281982421875 339.8800048828125 342.0000305175781 341.9081726074219 342.0000305175781 344.4100646972656 C 342.0000305175781 346.9119262695312 344.0281982421875 348.9401245117188 346.5300598144531 348.9401245117188 C 349.0319519042969 348.9401245117188 351.0601196289062 346.9119262695312 351.0601196289062 344.4100646972656 C 351.0601196289062 341.9081726074219 349.0319519042969 339.8800048828125 346.5300598144531 339.8800048828125 Z M 346.5300598144531 345.9200744628906 C 345.6961059570312 345.9200744628906 345.0200500488281 345.2440185546875 345.0200500488281 344.4100646972656 C 345.0200500488281 343.5760803222656 345.6961059570312 342.9000549316406 346.5300598144531 342.9000549316406 C 347.3640441894531 342.9000549316406 348.0400695800781 343.5760803222656 348.0400695800781 344.4100646972656 C 348.0400695800781 345.2440185546875 347.3640441894531 345.9200744628906 346.5300598144531 345.9200744628906 Z">
+				</path>
+			</svg>
+			<svg class="Path_425" viewBox="194.08 339.88 18.724 9.06">
+				<path fill="rgba(0,0,0,1)" id="Path_425" d="M 211.2941284179688 339.8800048828125 L 195.5899963378906 339.8800048828125 C 194.7560424804688 339.8800048828125 194.0799865722656 340.5560913085938 194.0799865722656 341.3900146484375 L 194.0799865722656 347.4300842285156 C 194.0799865722656 348.2640380859375 194.7560424804688 348.9401245117188 195.5899963378906 348.9401245117188 L 211.2941284179688 348.9401245117188 C 212.1281127929688 348.9401245117188 212.8041381835938 348.2640380859375 212.8041381835938 347.4300842285156 L 212.8041381835938 341.3900146484375 C 212.8041381835938 340.5560913085938 212.1281127929688 339.8800048828125 211.2941284179688 339.8800048828125 Z M 209.7841186523438 345.9200744628906 L 197.1000366210938 345.9200744628906 L 197.1000366210938 342.9000549316406 L 209.7841186523438 342.9000549316406 L 209.7841186523438 345.9200744628906 Z">
+				</path>
+			</svg>
+		</div>
+		<div id="_18_min">
+			<span id="bus18-aab"></span>
+		</div>
+		<div id="ID17_min">
+			<span id="bus17-aab"></span>
+		</div>
+	</div>
+	<div id="Group_313">
+		<div id="bus_oq">
+			<div id="Group_278_or">
+				<svg class="Path_404_os" viewBox="103.2 433 8.518 10.496">
+					<path fill="rgba(137,137,152,1)" id="Path_404_os" d="M 107.4591903686523 443.4959106445312 L 107.4591903686523 443.4959106445312 C 105.1014251708984 443.4959106445312 103.1999969482422 441.594482421875 103.1999969482422 439.2366943359375 L 103.1999969482422 433.0000610351562 L 111.7183685302734 433.0000610351562 L 111.7183685302734 439.2366943359375 C 111.7183685302734 441.594482421875 109.8017425537109 443.4959106445312 107.4591903686523 443.4959106445312 Z">
+					</path>
+				</svg>
+				<svg class="Path_405_ot" viewBox="353.1 433 8.518 10.496">
+					<path fill="rgba(137,137,152,1)" id="Path_405_ot" d="M 357.3592529296875 443.4959106445312 L 357.3592529296875 443.4959106445312 C 355.0014038085938 443.4959106445312 353.1000366210938 441.594482421875 353.1000366210938 439.2366943359375 L 353.1000366210938 433.0000610351562 L 361.6184387207031 433.0000610351562 L 361.6184387207031 439.2366943359375 C 361.6184387207031 441.594482421875 359.7017211914062 443.4959106445312 357.3592529296875 443.4959106445312 Z">
+					</path>
+				</svg>
+				<svg class="Path_406_ou" viewBox="462 104.9 6.085 11.774">
+					<path fill="rgba(137,137,152,1)" id="Path_406_ou" d="M 465.0423583984375 116.6736297607422 L 465.0423583984375 116.6736297607422 C 463.3690795898438 116.6736297607422 462.0000610351562 115.3046112060547 462.0000610351562 113.63134765625 L 462.0000610351562 107.9422912597656 C 462.0000610351562 106.26904296875 463.3690795898438 104.900032043457 465.0423583984375 104.900032043457 L 465.0423583984375 104.900032043457 C 466.715576171875 104.900032043457 468.0846557617188 106.26904296875 468.0846557617188 107.9422912597656 L 468.0846557617188 113.63134765625 C 468.0846557617188 115.3046112060547 466.715576171875 116.6736297607422 465.0423583984375 116.6736297607422 Z">
+					</path>
+				</svg>
+				<svg class="Path_407_ov" viewBox="10 104.9 6.085 11.774">
+					<path fill="rgba(137,137,152,1)" id="Path_407_ov" d="M 13.04227447509766 116.6736297607422 L 13.04227447509766 116.6736297607422 C 14.71552658081055 116.6736297607422 16.08455276489258 115.3046112060547 16.08455276489258 113.63134765625 L 16.08455276489258 107.9422912597656 C 16.08455276489258 106.26904296875 14.71552658081055 104.900032043457 13.04227447509766 104.900032043457 L 13.04227447509766 104.900032043457 C 11.36902523040771 104.900032043457 10 106.26904296875 10 107.9422912597656 L 10 113.63134765625 C 10 115.3046112060547 11.36902523040771 116.6736297607422 13.04227447509766 116.6736297607422 Z">
+					</path>
+				</svg>
+			</div>
+			<svg class="Path_408_ow" viewBox="74.1 10 55.354 64.344">
+				<path fill="rgba(255,0,0,1)" id="Path_408_ow" d="M 123.3696517944336 10 L 80.18454742431641 10 C 76.82283020019531 10 74.09999084472656 12.72283744812012 74.09999084472656 16.08455276489258 L 74.09999084472656 68.25958251953125 C 74.09999084472656 71.62130737304688 76.82283020019531 74.34415435791016 80.18454742431641 74.34415435791016 L 123.3696517944336 74.34415435791016 C 126.7313690185547 74.34415435791016 129.4542083740234 71.62130737304688 129.4542083740234 68.25958251953125 L 129.4542083740234 16.08455276489258 C 129.4542083740234 12.72283744812012 126.7313690185547 10 123.3696517944336 10 Z">
+				</path>
+			</svg>
+			<svg class="Path_409_ox" viewBox="74 90 55.369 32.978">
+				<path fill="rgba(201,243,255,1)" id="Path_409_ox" d="M 129.3694305419922 116.5134429931641 L 122.9198150634766 122.9782867431641 L 80.44964599609375 122.9782867431641 L 74 116.5134429931641 L 74 89.99999237060547 L 129.3694305419922 89.99999237060547 L 129.3694305419922 116.5134429931641 Z">
+				</path>
+			</svg>
+			<div id="Group_279_oy">
+				<svg class="Ellipse_50_oz">
+					<ellipse fill="rgba(255,255,255,1)" id="Ellipse_50_oz" rx="3.0422751903533936" ry="3.0422751903533936" cx="3.0422751903533936" cy="3.0422751903533936">
+					</ellipse>
+				</svg>
+				<svg class="Ellipse_51_o">
+					<ellipse fill="rgba(255,255,255,1)" id="Ellipse_51_o" rx="3.0422751903533936" ry="3.0422751903533936" cx="3.0422751903533936" cy="3.0422751903533936">
+					</ellipse>
+				</svg>
+			</div>
+			<svg class="Rectangle_1487_o">
+				<rect fill="rgba(255,198,108,1)" id="Rectangle_1487_o" rx="0" ry="0" x="0" y="0" width="15.82" height="6.085">
+				</rect>
+			</svg>
+			<svg class="Rectangle_1488_o">
+				<rect fill="rgba(255,255,255,1)" id="Rectangle_1488_o" rx="0" ry="0" x="0" y="0" width="21" height="7">
+				</rect>
+			</svg>
+			<svg class="Path_410_o" viewBox="247.6 0 3.042 3.042">
+				<path fill="rgba(0,0,0,1)" id="Path_410_o" d="M 249.1211242675781 3.042275905609131 C 249.5166625976562 3.042275905609131 249.9121398925781 2.874950885772705 250.2011413574219 2.60114598274231 C 250.4901428222656 2.312130212783813 250.6423034667969 1.931845426559448 250.6423034667969 1.521137952804565 C 250.6423034667969 1.110430598258972 250.4749755859375 0.7301462888717651 250.2011413574219 0.4411301016807556 C 249.9273681640625 0.1521138697862625 249.5166625976562 5.654897350382271e-08 249.1211242675781 5.654897350382271e-08 C 248.7256469726562 5.654897350382271e-08 248.3301696777344 0.1673252433538437 248.0411376953125 0.4411301016807556 C 247.7521362304688 0.7149349451065063 247.6000061035156 1.110430717468262 247.6000061035156 1.521137952804565 C 247.6000061035156 1.931845188140869 247.767333984375 2.312129974365234 248.0411376953125 2.60114598274231 C 248.3301696777344 2.874950885772705 248.71044921875 3.042275905609131 249.1211242675781 3.042275905609131 Z">
+				</path>
+			</svg>
+			<svg class="Path_411_o" viewBox="0 0 77.867 77.882">
+				<path fill="rgba(0,0,0,1)" id="Path_411_o" d="M 74.83998870849609 14.69419384002686 L 74.83998870849609 10.41979598999023 C 74.83998870849609 8.107665061950684 72.968994140625 6.236665725708008 70.6568603515625 6.236665725708008 L 68.01008605957031 6.236665725708008 C 67.37120056152344 2.692414522171021 64.26808929443359 0 60.54129791259766 0 L 45.69498825073242 0 C 44.85836029052734 0 44.17385101318359 0.6845120787620544 44.17385101318359 1.521137952804565 C 44.17385101318359 2.357763767242432 44.85836029052734 3.042275905609131 45.69498825073242 3.042275905609131 L 60.54129791259766 3.042275905609131 C 63.05117416381836 3.042275905609131 65.10469818115234 5.095812797546387 65.10469818115234 7.605690479278564 L 65.10469818115234 12.16910362243652 L 50.50178909301758 12.16910362243652 L 50.50178909301758 7.605690479278564 C 50.50178909301758 6.769063949584961 49.81726455688477 6.084551811218262 48.98064422607422 6.084551811218262 L 28.9016227722168 6.084551811218262 C 28.06499481201172 6.084551811218262 27.38048553466797 6.769063949584961 27.38048553466797 7.605690479278564 L 27.38048553466797 12.16910362243652 L 12.79276943206787 12.16910362243652 L 12.79276943206787 7.605690479278564 C 12.79276943206787 5.095812797546387 14.84630489349365 3.042275905609131 17.35618782043457 3.042275905609131 L 32.6284065246582 3.042275905609131 C 33.46503829956055 3.042275905609131 34.1495475769043 2.357763767242432 34.1495475769043 1.521137952804565 C 34.1495475769043 0.6845120787620544 33.46503829956055 0 32.6284065246582 0 L 17.35618782043457 0 C 13.62939739227295 0 10.52627277374268 2.692414522171021 9.887397766113281 6.236665725708008 L 7.225405693054199 6.236665725708008 C 4.913276195526123 6.236665725708008 3.042275905609131 8.107665061950684 3.042275905609131 10.41979598999023 L 3.042275905609131 14.70940494537354 C 1.277755856513977 15.33307075500488 0 17.02153396606445 0 19.01422500610352 L 0 24.70328140258789 C 0 27.21315956115723 2.053536653518677 29.26669692993164 4.563413619995117 29.26669692993164 C 7.073291301727295 29.26669692993164 9.126827239990234 27.21315956115723 9.126827239990234 24.70328140258789 L 9.126827239990234 19.01422309875488 C 9.126827239990234 17.0367431640625 7.849071979522705 15.33306980133057 6.084551811218262 14.70940494537354 L 6.084551811218262 10.41979598999023 C 6.084551811218262 9.796128273010254 6.601739406585693 9.278942108154297 7.225405693054199 9.278942108154297 L 9.750494003295898 9.278942108154297 L 9.750494003295898 59.78071975708008 C 9.750494003295898 62.83821487426758 11.56064796447754 65.46977996826172 14.16179370880127 66.68669128417969 L 14.16179370880127 72.10194396972656 C 14.16179370880127 75.29634094238281 16.74773025512695 77.88227081298828 19.9421215057373 77.88227081298828 C 23.13651084899902 77.88227081298828 25.72244453430176 75.29634094238281 25.72244453430176 72.10194396972656 L 25.72244453430176 67.38641357421875 L 52.17502593994141 67.38641357421875 L 52.17502593994141 72.10194396972656 C 52.17502593994141 75.29634094238281 54.76097106933594 77.88227081298828 57.95536041259766 77.88227081298828 C 61.14974975585938 77.88227081298828 63.73568344116211 75.29634094238281 63.73568344116211 72.10194396972656 L 63.73568344116211 66.67147827148438 C 66.32161712646484 65.45456695556641 68.13176727294922 62.82299423217773 68.13176727294922 59.78071975708008 L 68.13176727294922 9.278942108154297 L 70.64164733886719 9.278942108154297 C 71.26532745361328 9.278942108154297 71.78250122070312 9.796128273010254 71.78250122070312 10.41979598999023 L 71.78250122070312 14.70940494537354 C 70.01797485351562 15.33307075500488 68.74022674560547 17.02153396606445 68.74022674560547 19.01422500610352 L 68.74022674560547 24.70328140258789 C 68.74022674560547 27.21315956115723 70.79376983642578 29.26669692993164 73.30364227294922 29.26669692993164 C 75.81351470947266 29.26669692993164 77.86705017089844 27.21315956115723 77.86705017089844 24.70328140258789 L 77.86705017089844 19.01422309875488 C 77.88227081298828 17.02153587341309 76.60452270507812 15.33307075500488 74.83998870849609 14.69419384002686 Z M 6.084551811218262 24.68806838989258 C 6.084551811218262 25.52469825744629 5.400040149688721 26.20920562744141 4.563413619995117 26.20920562744141 C 3.726788520812988 26.20920562744141 3.042275905609131 25.52469825744629 3.042275905609131 24.68806838989258 L 3.042275905609131 18.99901390075684 C 3.042275905609131 18.16238784790039 3.726788520812988 17.47787666320801 4.563413619995117 17.47787666320801 C 5.400040149688721 17.47787666320801 6.084551811218262 18.16238784790039 6.084551811218262 18.99901390075684 L 6.084551811218262 24.68806838989258 Z M 30.92473411560059 35.6859016418457 C 30.33149337768555 35.09265899658203 29.3731746673584 35.09265899658203 28.77993202209473 35.6859016418457 L 19.31845283508301 45.14737701416016 L 18.34492492675781 45.14737701416016 L 13.64460849761963 40.44705581665039 L 37.41999435424805 16.65646171569824 L 37.41999435424805 45.14737701416016 L 23.6232738494873 45.14737701416016 L 30.92473411560059 37.84591674804688 C 31.51797866821289 37.23745346069336 31.51797866821289 36.27914428710938 30.92473411560059 35.6859016418457 Z M 49.68036651611328 15.21138095855713 L 44.93441390991211 19.95733261108398 C 44.34118270874023 20.55057334899902 44.34118270874023 21.50889015197754 44.93441390991211 22.10213470458984 C 45.2386360168457 22.40636444091797 45.61893081665039 22.54326248168945 46.01442337036133 22.54326248168945 C 46.40992736816406 22.54326248168945 46.79020690917969 22.39115142822266 47.09443283081055 22.10213470458984 L 53.98519134521484 15.21138095855713 L 62.92948150634766 15.21138095855713 L 40.46227264404297 37.69380187988281 L 40.46227264404297 15.21138095855713 L 49.68036651611328 15.21138095855713 Z M 40.46227264404297 41.98340606689453 L 65.10469818115234 17.34097671508789 L 65.10469818115234 39.56480026245117 L 59.55255508422852 45.1169548034668 L 40.46227264404297 45.1169548034668 L 40.46227264404297 41.98340606689453 Z M 30.42276191711426 9.126827239990234 L 47.45951080322266 9.126827239990234 L 47.45951080322266 12.16910362243652 L 30.42276191711426 12.16910362243652 L 30.42276191711426 9.126827239990234 Z M 34.56025314331055 15.21138095855713 L 12.79276943206787 36.97886276245117 L 12.79276943206787 15.21138095855713 L 34.56025314331055 15.21138095855713 Z M 22.69538307189941 72.10194396972656 C 22.69538307189941 73.60787200927734 21.4632568359375 74.83998870849609 19.95733261108398 74.83998870849609 C 18.45140266418457 74.83998870849609 17.21928024291992 73.60787200927734 17.21928024291992 72.10194396972656 L 17.21928024291992 67.38641357421875 L 17.37139701843262 67.38641357421875 L 22.69538307189941 67.38641357421875 L 22.69538307189941 72.10194396972656 Z M 60.7086181640625 67.38641357421875 L 60.7086181640625 72.10194396972656 C 60.7086181640625 73.60787200927734 59.47650146484375 74.83998870849609 57.97056579589844 74.83998870849609 C 56.46464538574219 74.83998870849609 55.23252487182617 73.60787200927734 55.23252487182617 72.10194396972656 L 55.23252487182617 67.38641357421875 L 60.54129791259766 67.38641357421875 L 60.7086181640625 67.38641357421875 Z M 60.54129791259766 64.34413146972656 L 17.35618782043457 64.34413146972656 C 14.84630489349365 64.34413146972656 12.79276943206787 62.29060363769531 12.79276943206787 59.78071975708008 L 12.79276943206787 43.90004348754883 L 16.62603759765625 47.73330688476562 C 16.91505432128906 48.02233123779297 17.29533767700195 48.17444229125977 17.7060489654541 48.17444229125977 L 60.16100692749023 48.17444229125977 C 60.57172012329102 48.17444229125977 60.95199966430664 48.00711441040039 61.24101638793945 47.73330688476562 L 65.08950042724609 43.88483047485352 L 65.08950042724609 59.78071975708008 C 65.10469818115234 62.29060363769531 63.05117416381836 64.34413146972656 60.54129791259766 64.34413146972656 Z M 74.83998870849609 24.68806838989258 C 74.83998870849609 25.52469825744629 74.15547943115234 26.20920562744141 73.31885528564453 26.20920562744141 C 72.48223114013672 26.20920562744141 71.79771423339844 25.52469825744629 71.79771423339844 24.68806838989258 L 71.79771423339844 18.99901390075684 C 71.79771423339844 18.16238784790039 72.48223114013672 17.47787666320801 73.31885528564453 17.47787666320801 C 74.15547943115234 17.47787666320801 74.83998870849609 18.16238784790039 74.83998870849609 18.99901390075684 L 74.83998870849609 24.68806838989258 Z">
+				</path>
+			</svg>
+			<svg class="Path_412_o" viewBox="110 339.9 9.127 9.127">
+				<path fill="rgba(0,0,0,1)" id="Path_412_o" d="M 114.5634002685547 339.9000854492188 C 112.0535430908203 339.9000854492188 110 341.95361328125 110 344.4634399414062 C 110 346.9733276367188 112.0535430908203 349.0268859863281 114.5634002685547 349.0268859863281 C 117.0732879638672 349.0268859863281 119.1268157958984 346.9733276367188 119.1268157958984 344.4634399414062 C 119.1268157958984 341.95361328125 117.0885162353516 339.9000854492188 114.5634002685547 339.9000854492188 Z M 114.5634002685547 345.984619140625 C 113.7267913818359 345.984619140625 113.0422821044922 345.3000793457031 113.0422821044922 344.4634399414062 C 113.0422821044922 343.6268920898438 113.7267913818359 342.9423217773438 114.5634002685547 342.9423217773438 C 115.4000396728516 342.9423217773438 116.0845642089844 343.6268920898438 116.0845642089844 344.4634399414062 C 116.0845642089844 345.3000793457031 115.4152526855469 345.984619140625 114.5634002685547 345.984619140625 Z">
+				</path>
+			</svg>
+			<svg class="Path_413_o" viewBox="342 339.9 9.127 9.127">
+				<path fill="rgba(0,0,0,1)" id="Path_413_o" d="M 346.5634460449219 339.9000854492188 C 344.0535583496094 339.9000854492188 342.0000610351562 341.95361328125 342.0000610351562 344.4634399414062 C 342.0000610351562 346.9733276367188 344.0535583496094 349.0268859863281 346.5634460449219 349.0268859863281 C 349.0733337402344 349.0268859863281 351.1268310546875 346.9733276367188 351.1268310546875 344.4634399414062 C 351.1268310546875 341.95361328125 349.0733337402344 339.9000854492188 346.5634460449219 339.9000854492188 Z M 346.5634460449219 345.984619140625 C 345.726806640625 345.984619140625 345.0423278808594 345.3000793457031 345.0423278808594 344.4634399414062 C 345.0423278808594 343.6268920898438 345.726806640625 342.9423217773438 346.5634460449219 342.9423217773438 C 347.4000244140625 342.9423217773438 348.0845947265625 343.6268920898438 348.0845947265625 344.4634399414062 C 348.0845947265625 345.3000793457031 347.4000244140625 345.984619140625 346.5634460449219 345.984619140625 Z">
+				</path>
+			</svg>
+			<svg class="Path_414_o" viewBox="194.1 339.9 18.862 9.127">
+				<path fill="rgba(0,0,0,1)" id="Path_414_o" d="M 211.4410400390625 339.9000854492188 L 195.6212005615234 339.9000854492188 C 194.7845611572266 339.9000854492188 194.1000518798828 340.5845336914062 194.1000518798828 341.4212036132812 L 194.1000518798828 347.5057678222656 C 194.1000518798828 348.3423461914062 194.7845611572266 349.0268859863281 195.6212005615234 349.0268859863281 L 211.4410400390625 349.0268859863281 C 212.2776489257812 349.0268859863281 212.962158203125 348.3423461914062 212.962158203125 347.5057678222656 L 212.962158203125 341.4212036132812 C 212.962158203125 340.5845336914062 212.2776489257812 339.9000854492188 211.4410400390625 339.9000854492188 Z M 209.9198608398438 345.984619140625 L 197.142333984375 345.984619140625 L 197.142333984375 342.9423217773438 L 209.9198608398438 342.9423217773438 L 209.9198608398438 345.984619140625 Z">
+				</path>
+			</svg>
+		</div>
+		<div id="Bus_18__o">
+			<span>Bus 18 </span>
+		</div>
+		<div id="Bus_17_o">
+			<span>Bus 17</span>
+		</div>
+		<div id="_sthavnen">
+			<span>Østhavnen</span>
+		</div>
+		<div id="bus_gul_pb">
+			<svg class="Path_415_pc" viewBox="103.17 433 8.456 10.419">
+				<path fill="rgba(137,137,152,1)" id="Path_415_pc" d="M 107.3980407714844 443.4190673828125 L 107.3980407714844 443.4190673828125 C 105.0629501342773 443.4190673828125 103.1699981689453 441.526123046875 103.1699981689453 439.1910400390625 L 103.1699981689453 433 L 111.6260757446289 433 L 111.6260757446289 439.1910400390625 C 111.6260757446289 441.526123046875 109.7331161499023 443.4190673828125 107.3980407714844 443.4190673828125 Z">
+				</path>
+			</svg>
+			<svg class="Path_416_pd" viewBox="353.09 433 8.456 10.419">
+				<path fill="rgba(137,137,152,1)" id="Path_416_pd" d="M 357.3180236816406 443.4190673828125 L 357.3180236816406 443.4190673828125 C 354.9829406738281 443.4190673828125 353.0899963378906 441.526123046875 353.0899963378906 439.1910400390625 L 353.0899963378906 433 L 361.5460815429688 433 L 361.5460815429688 439.1910400390625 C 361.5460815429688 441.526123046875 359.6531066894531 443.4190673828125 357.3180236816406 443.4190673828125 Z">
+				</path>
+			</svg>
+			<svg class="Path_417_pe" viewBox="462 104.92 6.04 11.683">
+				<path fill="rgba(137,137,152,1)" id="Path_417_pe" d="M 465.02001953125 116.6029663085938 L 465.02001953125 116.6029663085938 C 463.3521118164062 116.6029663085938 462 115.250862121582 462 113.5829467773438 L 462 107.9400253295898 C 462 106.2721176147461 463.3521118164062 104.9199981689453 465.02001953125 104.9199981689453 L 465.02001953125 104.9199981689453 C 466.6879272460938 104.9199981689453 468.0400390625 106.2721176147461 468.0400390625 107.9400253295898 L 468.0400390625 113.5829467773438 C 468.0400390625 115.250862121582 466.6879272460938 116.6029663085938 465.02001953125 116.6029663085938 Z">
+				</path>
+			</svg>
+			<svg class="Path_418_pf" viewBox="10 104.92 6.04 11.683">
+				<path fill="rgba(137,137,152,1)" id="Path_418_pf" d="M 13.0200252532959 116.6029663085938 L 13.0200252532959 116.6029663085938 C 14.68793964385986 116.6029663085938 16.04005241394043 115.250862121582 16.04005241394043 113.5829467773438 L 16.04005241394043 107.9400253295898 C 16.04005241394043 106.2721176147461 14.68793869018555 104.9199981689453 13.0200252532959 104.9199981689453 L 13.0200252532959 104.9199981689453 C 11.35210990905762 104.9199981689453 9.999998092651367 106.2721176147461 9.999998092651367 107.9400253295898 L 9.999998092651367 113.5829467773438 C 9.999998092651367 115.250862121582 11.35210990905762 116.6029663085938 13.02002334594727 116.6029663085938 Z">
+				</path>
+			</svg>
+			<svg class="Path_419_pg" viewBox="74.13 10 54.945 63.874">
+				<path fill="rgba(255,255,0,1)" id="Path_419_pg" d="M 123.0348129272461 10 L 80.17005920410156 10 C 76.83422088623047 10 74.12999725341797 12.70422458648682 74.12999725341797 16.04005432128906 L 74.12999725341797 67.83351898193359 C 74.12999725341797 71.16934204101562 76.83422088623047 73.87357330322266 80.17005920410156 73.87357330322266 L 123.0348129272461 73.87357330322266 C 126.3706283569336 73.87357330322266 129.0748443603516 71.16934204101562 129.0748443603516 67.83351898193359 L 129.0748443603516 16.04005241394043 C 129.0748443603516 12.70422458648682 126.3706283569336 10 123.0348129272461 10 Z">
+				</path>
+			</svg>
+			<svg class="Path_420_ph" viewBox="74 90 54.964 32.731">
+				<path fill="rgba(201,243,255,1)" id="Path_420_ph" d="M 128.9644927978516 116.3240661621094 L 122.5574951171875 122.7310485839844 L 80.40699005126953 122.7310485839844 L 74 116.3240661621094 L 74 90 L 128.9584655761719 90 L 128.9644927978516 116.3240661621094 Z">
+				</path>
+			</svg>
+			<svg class="Ellipse_52_pi">
+				<ellipse fill="rgba(255,255,255,1)" id="Ellipse_52_pi" rx="3.020026683807373" ry="3.020026683807373" cx="3.020026683807373" cy="3.020026683807373">
+				</ellipse>
+			</svg>
+			<svg class="Ellipse_53_pj">
+				<ellipse fill="rgba(255,255,255,1)" id="Ellipse_53_pj" rx="3.020026683807373" ry="3.020026683807373" cx="3.020026683807373" cy="3.020026683807373">
+				</ellipse>
+			</svg>
+			<svg class="Rectangle_1489_pk">
+				<rect fill="rgba(255,198,108,1)" id="Rectangle_1489_pk" rx="0" ry="0" x="0" y="0" width="15.704" height="6.04">
+				</rect>
+			</svg>
+			<svg class="Rectangle_1490_pl">
+				<rect fill="rgba(255,255,255,1)" id="Rectangle_1490_pl" rx="0" ry="0" x="0" y="0" width="20" height="7">
+				</rect>
+			</svg>
+			<svg class="Path_421_pm" viewBox="247.58 -0.003 3.02 3.021">
+				<path fill="rgba(0,0,0,1)" id="Path_421_pm" d="M 249.0898132324219 3.017209768295288 C 249.9237670898438 3.017209768295288 250.5998229980469 2.341153860092163 250.5998229980469 1.50719678401947 C 250.5998229980469 0.8233668208122253 250.1407165527344 0.2250923663377762 249.48046875 0.04826726764440536 C 248.820556640625 -0.1286154091358185 248.1238098144531 0.1599609851837158 247.7820739746094 0.75190669298172 C 247.4403381347656 1.343852400779724 247.5388488769531 2.091534852981567 248.022216796875 2.574776172637939 C 248.3060913085938 2.856863498687744 248.6896057128906 3.015810251235962 249.0898132324219 3.017210006713867 Z">
+				</path>
+			</svg>
+			<svg class="Path_422_pn" viewBox="0 0 77.313 77.313">
+				<path fill="rgba(0,0,0,1)" id="Path_422_pn" d="M 74.29265594482422 14.59276962280273 L 74.29265594482422 10.34208202362061 C 74.28849792480469 8.050077438354492 72.43061065673828 6.193545818328857 70.13860321044922 6.191053867340088 L 67.51723480224609 6.191055297851562 C 66.85768890380859 2.610236167907715 63.73957824707031 0.008116759359836578 60.09852981567383 0 L 45.3502311706543 0 C 44.51627349853516 0 43.84021759033203 0.6760560870170593 43.84021759033203 1.510013341903687 C 43.84021759033203 2.343970775604248 44.51627349853516 3.020026683807373 45.3502311706543 3.020026683807373 L 60.09852981567383 3.020026683807373 C 62.60041046142578 3.02002739906311 64.62857818603516 5.048195362091064 64.62857818603516 7.550066947937012 L 64.62857818603516 12.08010673522949 L 50.13244247436523 12.08010673522949 L 50.13244247436523 7.550066947937012 C 50.13244247436523 6.716109752655029 49.45639038085938 6.040053367614746 48.62243270874023 6.040053367614746 L 28.69025421142578 6.040053367614746 C 27.85629844665527 6.040053367614746 27.18024063110352 6.716109752655029 27.18024063110352 7.550066947937012 L 27.18024063110352 12.08010673522949 L 12.70374202728271 12.08010673522949 L 12.70374202728271 7.550066947937012 C 12.70374298095703 5.048195362091064 14.73191165924072 3.020026683807373 17.23378372192383 3.02002739906311 L 32.38978576660156 3.020026683807373 C 33.2237434387207 3.020026683807373 33.89979934692383 2.343970775604248 33.89979934692383 1.510013341903687 C 33.89979934692383 0.6760560274124146 33.2237434387207 0 32.38978576660156 0 L 17.2337818145752 0 C 13.59274291992188 0.008123096078634262 10.47464466094971 2.610241889953613 9.815089225769043 6.191055297851562 L 7.174073696136475 6.191055297851562 C 4.882068157196045 6.193547248840332 3.024186849594116 8.050078392028809 3.020026683807373 10.34208106994629 L 3.020026683807373 14.59276962280273 C 1.210289120674133 15.23260879516602 0.0002738996117841452 16.94357299804688 0 18.86308670043945 L 0 24.50600814819336 C 0 27.00787734985352 2.028168201446533 29.03604698181152 4.530040264129639 29.03604698181152 C 7.031912803649902 29.03604698181152 9.060080528259277 27.00787734985352 9.060080528259277 24.50600814819336 L 9.060080528259277 18.86308670043945 C 9.057549476623535 16.94428825378418 7.848361015319824 15.2344970703125 6.040052890777588 14.59277057647705 L 6.040053367614746 10.34208202362061 C 6.042546272277832 9.717303276062012 6.54929256439209 9.211907386779785 7.174074649810791 9.211080551147461 L 9.683714866638184 9.211081504821777 L 9.683714866638184 59.34352874755859 C 9.685746192932129 62.28514862060547 11.39410591125488 64.95844268798828 14.0627555847168 66.19596862792969 L 14.0627555847168 71.57463836669922 C 14.0627555847168 74.74367523193359 16.63176918029785 77.31268310546875 19.80080795288086 77.31268310546875 C 22.9698429107666 77.31268310546875 25.53885841369629 74.74367523193359 25.53885841369629 71.57463836669922 L 25.53885841369629 66.89359283447266 L 51.80704879760742 66.89359283447266 L 51.80704879760742 71.57463836669922 C 51.80705642700195 74.74367523193359 54.37606811523438 77.31268310546875 57.54510879516602 77.31268310546875 C 60.71413803100586 77.31268310546875 63.28315734863281 74.74367523193359 63.28315734863281 71.57463836669922 L 63.28314971923828 66.18388366699219 C 65.94254302978516 64.94423675537109 67.64434051513672 62.27764511108398 67.64859771728516 59.34352493286133 L 67.64859771728516 9.211081504821777 L 70.1446533203125 9.211081504821777 C 70.76706695556641 9.215214729309082 71.27015686035156 9.719649314880371 71.27262878417969 10.34208297729492 L 71.27262878417969 14.59276962280273 C 69.46432495117188 15.23449897766113 68.255126953125 16.94428825378418 68.25260925292969 18.86308670043945 L 68.25260925292969 24.50600814819336 C 68.25260925292969 27.00787734985352 70.28077697753906 29.03604698181152 72.78265380859375 29.03604698181152 C 75.28452301025391 29.03604698181152 77.31268310546875 27.00787734985352 77.31268310546875 24.50600814819336 L 77.31268310546875 18.86308670043945 C 77.31015014648438 16.94428825378418 76.10095977783203 15.2344970703125 74.29265594482422 14.59277057647705 Z M 6.040053367614746 24.50600814819336 C 6.040053367614746 25.33996391296387 5.363997459411621 26.01602172851562 4.530040264129639 26.01602172851562 C 3.696083068847656 26.01602172851562 3.020026683807373 25.33996391296387 3.020026683807373 24.50600814819336 L 3.020026683807373 18.86308670043945 C 3.020026683807373 18.02912902832031 3.696083068847656 17.35307502746582 4.530040264129639 17.35307502746582 C 5.363997459411621 17.35307502746582 6.040053367614746 18.02912902832031 6.040053367614746 18.86308670043945 L 6.040053367614746 24.50600814819336 Z M 30.69555282592773 35.4249153137207 C 30.10589218139648 34.83543395996094 29.15005111694336 34.83543395996094 28.56039237976074 35.4249153137207 L 19.17717170715332 44.81116104125977 L 18.20925140380859 44.81116104125977 L 13.5357608795166 40.14068222045898 L 37.14632797241211 16.53011703491211 L 37.14632797241211 44.81116104125977 L 23.44446754455566 44.81116104125977 L 30.69253158569336 37.56309509277344 C 30.9769401550293 37.28020858764648 31.13710021972656 36.89577865600586 31.13766479492188 36.49463272094727 C 31.13823127746582 36.0934944152832 30.97916030883789 35.7086067199707 30.69555282592773 35.42491912841797 Z M 49.32308197021484 15.10013389587402 L 44.61938858032227 19.80382347106934 C 44.02978134155273 20.39384841918945 44.03011703491211 21.35012817382812 44.62014007568359 21.93973731994629 C 45.21016311645508 22.52934455871582 46.16644668579102 22.52900886535645 46.75605773925781 21.9389820098877 L 53.59490203857422 15.10013389587402 L 62.47982025146484 15.10013389587402 L 40.16635513305664 37.41209411621094 L 40.16635513305664 15.10013389587402 L 49.32308197021484 15.10013389587402 Z M 40.16635513305664 41.68391418457031 L 64.62857818603516 17.22170066833496 L 64.62857818603516 39.29508209228516 L 59.11249542236328 44.81116104125977 L 40.16635513305664 44.81116104125977 L 40.16635513305664 41.68391418457031 Z M 30.20026779174805 9.060080528259277 L 47.11241912841797 9.060080528259277 L 47.11241912841797 12.08010673522949 L 30.20026779174805 12.08010673522949 L 30.20026779174805 9.060080528259277 Z M 34.30599212646484 15.10013389587402 L 12.70374202728271 36.70238494873047 L 12.70374202728271 15.10013389587402 L 34.30599212646484 15.10013389587402 Z M 22.52788925170898 71.57463836669922 C 22.52788925170898 73.07575225830078 21.31098937988281 74.29265594482422 19.80986595153809 74.29265594482422 C 18.30874252319336 74.29265594482422 17.09184265136719 73.07575225830078 17.09184265136719 71.57463836669922 L 17.09184265136719 66.89359283447266 L 22.52788925170898 66.89359283447266 L 22.52788925170898 71.57463836669922 Z M 60.26614761352539 66.89359283447266 L 60.26614761352539 71.57463836669922 C 60.26614761352539 73.07575225830078 59.04924011230469 74.29265594482422 57.54811859130859 74.29265594482422 C 56.0469970703125 74.29265594482422 54.8300895690918 73.07575225830078 54.8300895690918 71.57463836669922 L 54.8300895690918 66.89359283447266 L 60.26614761352539 66.89359283447266 Z M 60.09852981567383 63.87356567382812 L 17.2337818145752 63.87356567382812 C 14.73191165924072 63.87356567382812 12.70374298095703 61.84540176391602 12.70374298095703 59.34352874755859 L 12.70374202728271 43.57898712158203 L 16.51350784301758 47.38875198364258 C 16.79662132263184 47.67195510864258 17.18063926696777 47.83110427856445 17.58108520507812 47.83118438720703 L 59.73160552978516 47.83118438720703 C 60.13172912597656 47.83118438720703 60.51578521728516 47.67212295532227 60.79895782470703 47.38898086547852 L 64.62857818603516 43.56539535522461 L 64.62857818603516 59.34352874755859 C 64.62857818603516 61.84540176391602 62.60041046142578 63.87356567382812 60.09853744506836 63.87356567382812 Z M 74.29265594482422 24.50600814819336 C 74.29265594482422 25.33996772766113 73.61660766601562 26.01602554321289 72.78263854980469 26.01602554321289 C 71.94869232177734 26.01602554321289 71.27262878417969 25.33996772766113 71.27262878417969 24.50601005554199 L 71.27262878417969 18.86308670043945 C 71.27262878417969 18.02912902832031 71.94869232177734 17.35307502746582 72.78263854980469 17.35307502746582 C 73.61660766601562 17.35307502746582 74.29265594482422 18.02912902832031 74.29265594482422 18.86308670043945 L 74.29265594482422 24.50600814819336 Z">
+				</path>
+			</svg>
+			<svg class="Path_423_po" viewBox="110 339.88 9.06 9.06">
+				<path fill="rgba(0,0,0,1)" id="Path_423_po" d="M 114.5300521850586 339.8800048828125 C 112.028190612793 339.8800048828125 110.0000152587891 341.9081726074219 110.0000152587891 344.4100646972656 C 110.0000152587891 346.9119262695312 112.028190612793 348.9401245117188 114.5300521850586 348.9401245117188 C 117.0319290161133 348.9401245117188 119.0600967407227 346.9119262695312 119.0600967407227 344.4100646972656 C 119.0600967407227 341.9081726074219 117.0319290161133 339.8800048828125 114.5300521850586 339.8800048828125 Z M 114.5300521850586 345.9200744628906 C 113.6961059570312 345.9200744628906 113.0200424194336 345.2440185546875 113.0200424194336 344.4100646972656 C 113.0200424194336 343.5760803222656 113.6961059570312 342.9000549316406 114.5300521850586 342.9000549316406 C 115.3640213012695 342.9000549316406 116.0400695800781 343.5760803222656 116.0400695800781 344.4100646972656 C 116.0400695800781 345.2440185546875 115.3640213012695 345.9200744628906 114.5300521850586 345.9200744628906 Z">
+				</path>
+			</svg>
+			<svg class="Path_424_pp" viewBox="342 339.88 9.06 9.06">
+				<path fill="rgba(0,0,0,1)" id="Path_424_pp" d="M 346.5300598144531 339.8800048828125 C 344.0281982421875 339.8800048828125 342.0000305175781 341.9081726074219 342.0000305175781 344.4100646972656 C 342.0000305175781 346.9119262695312 344.0281982421875 348.9401245117188 346.5300598144531 348.9401245117188 C 349.0319519042969 348.9401245117188 351.0601196289062 346.9119262695312 351.0601196289062 344.4100646972656 C 351.0601196289062 341.9081726074219 349.0319519042969 339.8800048828125 346.5300598144531 339.8800048828125 Z M 346.5300598144531 345.9200744628906 C 345.6961059570312 345.9200744628906 345.0200500488281 345.2440185546875 345.0200500488281 344.4100646972656 C 345.0200500488281 343.5760803222656 345.6961059570312 342.9000549316406 346.5300598144531 342.9000549316406 C 347.3640441894531 342.9000549316406 348.0400695800781 343.5760803222656 348.0400695800781 344.4100646972656 C 348.0400695800781 345.2440185546875 347.3640441894531 345.9200744628906 346.5300598144531 345.9200744628906 Z">
+				</path>
+			</svg>
+			<svg class="Path_425_pq" viewBox="194.08 339.88 18.724 9.06">
+				<path fill="rgba(0,0,0,1)" id="Path_425_pq" d="M 211.2941284179688 339.8800048828125 L 195.5899963378906 339.8800048828125 C 194.7560424804688 339.8800048828125 194.0799865722656 340.5560913085938 194.0799865722656 341.3900146484375 L 194.0799865722656 347.4300842285156 C 194.0799865722656 348.2640380859375 194.7560424804688 348.9401245117188 195.5899963378906 348.9401245117188 L 211.2941284179688 348.9401245117188 C 212.1281127929688 348.9401245117188 212.8041381835938 348.2640380859375 212.8041381835938 347.4300842285156 L 212.8041381835938 341.3900146484375 C 212.8041381835938 340.5560913085938 212.1281127929688 339.8800048828125 211.2941284179688 339.8800048828125 Z M 209.7841186523438 345.9200744628906 L 197.1000366210938 345.9200744628906 L 197.1000366210938 342.9000549316406 L 209.7841186523438 342.9000549316406 L 209.7841186523438 345.9200744628906 Z">
+				</path>
+			</svg>
+		</div>
+		<div id="_18_min_pr">
+			<span id="osthavnentime"></span>
+		</div>
+		<div id="ID17_min_ps">
+			<span id="saltumvejtime"></span>
+		</div>
+	</div>
+	<div id="Saltumvej">
+		<span>Saltumvej</span>
+	</div>
+	<div id="Group_314">
+		<div id="Logo_pv">
+			<span style="color:black">MEDIE</span><span style="color:black;font-style:normal;font-weight:normal;">HUSET</span>
+		</div>
+		<div id="Logo_pw">
+			<span style="color:black">TECH</span><span style="color:black;font-style:normal;font-weight:normal;">COLLEGE</span>
+		</div>
+		<img id="Image_1_px" src="../../assets/img/Image_1_px.png" srcset="../../assets/img/Image_1_px.png 1x, ../../assets/img/Image_1_px@2x.png 2x">
+	</div>
+</div>
+
+<script src="../../assets/js/new.js" defer></script>
+
+</body>
+</html>

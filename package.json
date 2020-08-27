@@ -1,0 +1,20 @@
+{
+  "name": "info-dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
+    "rss-parser": "^3.7.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "scripts": {
+    "start": "nodemon"
+  },
+  "author": "",
+  "license": "ISC"
+}
